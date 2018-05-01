@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "lts/8"
+  - "lts/carbon"
 install:
   - |
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -

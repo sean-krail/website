@@ -6,8 +6,6 @@ install:
 script:
   - cd website-client/
   - npm run build
-deploy:
-  - pwd
   - cd dist/
   - |
     function upload_to() {

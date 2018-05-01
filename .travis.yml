@@ -1,0 +1,35 @@
+language: node_js
+node_js:
+  - "lts/carbon"
+install:
+  - |
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    sudo apt-get update
+    sudo apt-get install yarn
+  - pip install --upgrade --user awscli
+script:
+  - cd website-client/
+  - yarn install
+  - yarn run build
+  - cd dist/
+  - |
+    function upload_to() {
+      if [ -z "$1" ]; then
+        echo "Error: No bucket name provided."
+        exit 1
+      fi
+      for FILE in $(ls); do
+        aws s3api put-object --bucket "$1" --key "$FILE" --body "$FILE"
+      done
+    }
+  - |
+    if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
+      if [ "$TRAVIS_BRANCH" = "develop" ]; then
+        upload_to dev.seankrail.com || exit 2
+      elif [ "$TRAVIS_BRANCH" = "master" ]; then
+        upload_to staging.seankrail.com || exit 3
+      elif [[ "$TRAVIS_TAG" = release-* ]]; then
+        upload_to prod.seankrail.com || exit 4
+      fi
+    fi

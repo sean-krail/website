@@ -15,7 +15,7 @@ script:
   - cd dist/
   - |
     function upload_to() {
-      if [ -z "$1" ];
+      if [ -z "$1" ]; then
         echo "Error: No bucket name provided."
         exit 1
       fi

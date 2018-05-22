@@ -14,6 +14,9 @@ install:
 script:
   - cd website-client/
   - |
+    pwd
+    ls -lA
+    ls -lA website-client/
     echo Installing node_modules...
     yarn install || exit 6
   - |

@@ -4,13 +4,16 @@ node_js:
 install:
   - |
     echo Reinstalling node...
-    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+    curl -sSL https://deb.nodesource.com/setup_8.x | sudo -E bash - || exit 1
+    sudo apt-get install -y -qq nodejs || exit 2
+    node -v
   - |
     echo Installing yarn...
-    sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3 || exit 1
-    echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list || exit 2
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - || exit 1
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list || exit 2
     sudo apt-get update -qq || exit 3
     sudo apt-get install -y -qq yarn || exit 4
+    yarn -v
     yarn config set cache-folder $HOME/.yarn-cache || exit 5
   - |
     echo Installing awscli...

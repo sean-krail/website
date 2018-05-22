@@ -9,16 +9,15 @@ install:
     node -v
   - |
     echo Installing yarn...
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - || exit 1
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list || exit 2
-    sudo apt-get update -qq || exit 3
-    sudo apt-get install -y -qq yarn || exit 4
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - || exit 3
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list || exit 4
+    sudo apt-get update -qq || exit 5
+    sudo apt-get install -y -qq yarn || exit 6
     yarn -v
-    yarn config set cache-folder $HOME/.yarn-cache || exit 5
-  - whereis yarn
+    yarn config set cache-folder $HOME/.yarn-cache || exit 7
   - |
     echo Installing awscli...
-    pip install --upgrade --user awscli || exit 6
+    pip install --upgrade --user awscli || exit 8
 cache:
   directories:
   - $HOME/.yarn-cache
@@ -26,10 +25,10 @@ script:
   - cd website-client/
   - |
     echo Installing node_modules...
-    yarn install || exit 7
+    yarn install || exit 9
   - |
     echo Building app...
-    yarn run build || exit 8
+    yarn run build || exit 10
   - |
     if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
       if [ "$TRAVIS_BRANCH" = "develop" ]; then
@@ -52,12 +51,12 @@ script:
   - |
     if [ -z $AWS_ACCESS_KEY_ID ] || [ -z $AWS_SECRET_ACCESS_KEY ]; then
       echo Error: AWS_ACCESS_KEY_ID and/or AWS_SECRET_ACCESS_KEY is not set.
-      exit 9
+      exit 11
     fi
   - |
     echo Deploying app to the $AWS_S3_BUCKET S3 bucket...
-    npm run deploy || exit 10
+    npm run deploy || exit 12
   - |
     echo Invalidating CloudFront cache...
-    npm run invalidate || exit 11
+    npm run invalidate || exit 13
   - echo App is now running at https://$AWS_S3_BUCKET/

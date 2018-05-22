@@ -15,6 +15,7 @@ install:
     sudo apt-get install -y -qq yarn || exit 4
     yarn -v
     yarn config set cache-folder $HOME/.yarn-cache || exit 5
+  - whereis yarn
   - |
     echo Installing awscli...
     pip install --upgrade --user awscli || exit 6

@@ -1,5 +1,5 @@
 # Design Assets
 
-- [Specifications](./specifications.md)
-- [Design](./design.md)
-- [Architecture](./architecture.md)
+- [Specifications](./specifications.md#readme)
+- [Design](./design.md#readme)
+- [Architecture](./architecture.md#readme)

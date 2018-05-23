@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "lts/carbon"
+cache:
+  directories:
+  - $HOME/.yarn-cache
 install:
   - |
     echo Reinstalling node...
@@ -18,9 +21,6 @@ install:
   - |
     echo Installing awscli...
     pip install --upgrade --user awscli || exit 8
-cache:
-  directories:
-  - $HOME/.yarn-cache
 script:
   - cd website-client/
   - |
@@ -30,6 +30,7 @@ script:
     echo Building app...
     yarn run build || exit 10
   - |
+    unset AWS_S3_BUCKET
     if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
       if [ "$TRAVIS_BRANCH" = "develop" ]; then
         export AWS_S3_BUCKET=dev.seankrail.com
@@ -40,8 +41,6 @@ script:
       elif [[ "$TRAVIS_TAG" = release-* ]]; then
         export AWS_S3_BUCKET=prod.seankrail.com
         export AWS_CLOUDFRONT_DISTRIBUTION_ID=E2MU4V8KU0B9Q6
-      else
-        unset AWS_S3_BUCKET
       fi
     fi
     if [ -z $AWS_S3_BUCKET ]; then

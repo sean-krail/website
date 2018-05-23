@@ -4,9 +4,13 @@
   "description": "React SPA for seankrail.com",
   "main": "dist/app.js",
   "scripts": {
+    "start": "webpack-dev-server --config build/webpack.development.js --mode development --progress --profile --bail --port 8080",
     "build": "npm run clean && webpack --config build/webpack.production.js --mode production --progress --profile --bail",
     "clean": "rm -rf dist/*",
-    "start": "webpack-dev-server --config build/webpack.development.js --mode development --progress --profile --bail --port 8080"
+    "deploy": "npm run deployHtml && npm run deployJson",
+    "deployHtml": "aws s3api put-object --bucket $AWS_S3_BUCKET --key index.html --body dist/index.html --content-type text/html --storage-class STANDARD_IA",
+    "deployJson": "aws s3api put-object --bucket $AWS_S3_BUCKET --key app.js --body dist/app.js --content-type application/json --storage-class STANDARD_IA",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID --paths /index.html /app.js"
   },
   "repository": {
     "type": "git",

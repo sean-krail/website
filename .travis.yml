@@ -1,35 +1,61 @@
 language: node_js
 node_js:
   - "lts/carbon"
+cache:
+  directories:
+  - $HOME/.yarn-cache
 install:
   - |
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    sudo apt-get update
-    sudo apt-get install yarn
-  - pip install --upgrade --user awscli
+    echo Reinstalling node...
+    curl -sSL https://deb.nodesource.com/setup_8.x | sudo -E bash - || exit 1
+    sudo apt-get install -y -qq nodejs || exit 2
+    node -v
+  - |
+    echo Installing yarn...
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - || exit 3
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list || exit 4
+    sudo apt-get update -qq || exit 5
+    sudo apt-get install -y -qq yarn || exit 6
+    yarn -v
+    yarn config set cache-folder $HOME/.yarn-cache || exit 7
+  - |
+    echo Installing awscli...
+    pip install --upgrade --user awscli || exit 8
 script:
   - cd website-client/
-  - yarn install
-  - yarn run build
-  - cd dist/
   - |
-    function upload_to() {
-      if [ -z "$1" ]; then
-        echo "Error: No bucket name provided."
-        exit 1
-      fi
-      for FILE in $(ls); do
-        aws s3api put-object --bucket "$1" --key "$FILE" --body "$FILE"
-      done
-    }
+    echo Installing node_modules...
+    yarn install || exit 9
   - |
+    echo Building app...
+    yarn run build || exit 10
+  - |
+    unset AWS_S3_BUCKET
     if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then
       if [ "$TRAVIS_BRANCH" = "develop" ]; then
-        upload_to dev.seankrail.com || exit 2
+        export AWS_S3_BUCKET=dev.seankrail.com
+        export AWS_CLOUDFRONT_DISTRIBUTION_ID=E15MGG4G32NHAI
       elif [ "$TRAVIS_BRANCH" = "master" ]; then
-        upload_to staging.seankrail.com || exit 3
+        export AWS_S3_BUCKET=staging.seankrail.com
+        export AWS_CLOUDFRONT_DISTRIBUTION_ID=E33A1DXRR1BDST
       elif [[ "$TRAVIS_TAG" = release-* ]]; then
-        upload_to prod.seankrail.com || exit 4
+        export AWS_S3_BUCKET=prod.seankrail.com
+        export AWS_CLOUDFRONT_DISTRIBUTION_ID=E2MU4V8KU0B9Q6
       fi
     fi
+    if [ -z $AWS_S3_BUCKET ]; then
+      echo App will not be deployed.
+      exit
+    fi
+  - |
+    if [ -z $AWS_ACCESS_KEY_ID ] || [ -z $AWS_SECRET_ACCESS_KEY ]; then
+      echo Error: AWS_ACCESS_KEY_ID and/or AWS_SECRET_ACCESS_KEY is not set.
+      exit 11
+    fi
+  - |
+    echo Deploying app to the $AWS_S3_BUCKET S3 bucket...
+    npm run deploy || exit 12
+  - |
+    echo Invalidating CloudFront cache...
+    npm run invalidate || exit 13
+  - echo App is now running at https://$AWS_S3_BUCKET/

@@ -1,7 +1,7 @@
 let backgroundImages = [
-  {src: "static/Mount-Diablo-Bay-View.min.jpg", loaded: false},
-  {src: "static/Mission-Dolores-Park.min.jpg", loaded: false},
-  {src: "static/Alameda-South-Shore-Beach.min.jpg", loaded: false}
+  {src: "assets/Mount-Diablo-Bay-View.min.jpg", loaded: false},
+  {src: "assets/Mission-Dolores-Park.min.jpg", loaded: false},
+  {src: "assets/Alameda-South-Shore-Beach.min.jpg", loaded: false}
 ];
 let backgroundImage = backgroundImages[0];
 let backgroundElement = document.getElementById("background");

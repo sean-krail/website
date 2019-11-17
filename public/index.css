@@ -24,7 +24,7 @@ div#loading {
 
 div#background {
   background-color: lightblue;
-  background-image: url(static/Mount-Diablo-Bay-View-Blurred.min.jpg);
+  background-image: url(assets/Mount-Diablo-Bay-View-Blurred.min.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

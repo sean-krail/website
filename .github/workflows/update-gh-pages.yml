@@ -1,16 +1,16 @@
-name: Update GitHub Pages
+name: Deploy GitHub Pages
 on:
   push:
     branches:
       - master
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Deploy
+      - name: Deploy GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           build_dir: public
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,16 +1,15 @@
 let backgroundImages = [
-  {src: "assets/Mount-Diablo-Bay-View.min.jpg", loaded: false},
-  {src: "assets/Mission-Dolores-Park.min.jpg", loaded: false},
-  {src: "assets/Alameda-South-Shore-Beach.min.jpg", loaded: false}
+  {src: "i/Mount-Diablo-Bay-View.min.jpg", loaded: false},
+  {src: "i/Mission-Dolores-Park.min.jpg", loaded: false},
+  {src: "i/Alameda-South-Shore-Beach.min.jpg", loaded: false}
 ];
 let backgroundImage = backgroundImages[0];
 let backgroundElement = document.getElementById("background");
 let numLoaded = 0;
 
 function setBackgroundImage(image) {
-  let url = "url(" + image.src + ")";
   backgroundImage = image;
-  backgroundElement.style.backgroundImage = url;
+  backgroundElement.style.backgroundImage = "url(" + image.src + ")";
 }
 
 function changeImage() {
@@ -35,4 +34,37 @@ backgroundImages.forEach((image) => {
     element.remove();
   };
   element.src = image.src;
+});
+
+const myface_container = document.getElementById("myface-container");
+const myface_border = document.getElementById("myface-border");
+const myface_image = document.getElementById("myface-image");
+myface_container.addEventListener("mousemove", e => {
+  const x0 = e.target === myface_container ? e.target.clientLeft : (e.target === myface_image ? e.target.parentElement.clientLeft : null);
+  const y0 = e.target === myface_container ? e.target.clientTop : (e.target === myface_image ? e.target.parentElement.clientTop : null);
+  const x1 = e.target === myface_container ? e.target.clientWidth : (e.target === myface_image ? e.target.parentElement.clientWidth : null);
+  const y1 = e.target === myface_container ? e.target.clientHeight : (e.target === myface_image ? e.target.parentElement.clientHeight : null);
+  if (!x1 || !y1) {
+    console.error("Whoops! There's a bug. Help me by reporting it at https://github.com/sean-krail/website/issues/new");
+  }
+  const xHalf = x0 + (x0 + x1) / 2;
+  const yHalf = y0 + (y0 + y1) / 2;
+  const x = e.layerX;
+  const y = e.layerY;
+  // console.log({x0, x1, xHalf, yHalf, y0, y1});
+  // console.log({x, y});
+  // console.log(e);
+  if (x < xHalf) {
+    if (y < yHalf) {
+      myface_border.className = "top-left"
+    } else {
+      myface_border.className = "bottom-left"
+    }
+  } else {
+    if (y < yHalf) {
+      myface_border.className = "top-right"
+    } else {
+      myface_border.className = "bottom-right"
+    }
+  }
 });

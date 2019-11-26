@@ -24,7 +24,7 @@ div#loading {
 
 div#background {
   background-color: lightblue;
-  background-image: url(assets/Mount-Diablo-Bay-View-Blurred.min.jpg);
+  background-image: url(i/Mount-Diablo-Bay-View-Blurred.min.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -57,19 +57,34 @@ div#card:hover + div {
   filter: blur(5px);
 }
 
-div#myface-container {
+div#myface-container,
+div#myface-border{
   width: 100px;
   height: 100px;
-  margin: 15px auto;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 50px;
   overflow: hidden;
-  transition: width 0.5s ease, height 0.5s ease;
+}
+div#myface-container {
+  margin: 15px auto;
+}
+div#myface-border {
+  border-radius: 50px;
+  overflow: hidden;
+  transition: border-radius 0.5s ease, height 0.5s ease;
+}
+div#myface-border.top-right {
+  border-top-right-radius: 5px;
+}
+div#myface-border.bottom-right {
+  border-bottom-right-radius: 5px;
+}
+div#myface-border.bottom-left {
+  border-bottom-left-radius: 5px;
+}
+div#myface-border.top-left {
+  border-top-left-radius: 5px;
 }
 
-img#myface {
+img#myface-image {
   height: 110px;
   margin-left: -20px;
   transition: margin 0.5s ease;

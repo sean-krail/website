@@ -13,4 +13,6 @@ jobs:
         with:
           build_dir: public
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/td-p/26869/
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

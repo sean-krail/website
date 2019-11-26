@@ -13,7 +13,8 @@ jobs:
         with:
           build_dir: public
           fqdn: krail.dev
+          target_branch: gh-pages
         env:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/td-p/26869/
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GITHUB_PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

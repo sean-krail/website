@@ -12,8 +12,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v1
         with:
           build_dir: public
-          # https://github.com/crazy-max/ghaction-github-pages/issues/30
-          # fqdn: krail.dev
+          fqdn: krail.dev
           target_branch: gh-pages
         env:
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

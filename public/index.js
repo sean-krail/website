@@ -42,18 +42,15 @@ const myface_image = document.getElementById("myface-image");
 myface_container.addEventListener("mousemove", e => {
   const x0 = e.target === myface_container ? e.target.clientLeft : (e.target === myface_image ? e.target.parentElement.clientLeft : null);
   const y0 = e.target === myface_container ? e.target.clientTop : (e.target === myface_image ? e.target.parentElement.clientTop : null);
-  const x1 = e.target === myface_container ? e.target.clientWidth : (e.target === myface_image ? e.target.parentElement.clientWidth : null);
-  const y1 = e.target === myface_container ? e.target.clientHeight : (e.target === myface_image ? e.target.parentElement.clientHeight : null);
-  if (!x1 || !y1) {
+  const x1 = e.target === myface_container ? e.target.clientWidth + x0 : (e.target === myface_image ? e.target.parentElement.clientWidth + x0 : null);
+  const y1 = e.target === myface_container ? e.target.clientHeight +y0 : (e.target === myface_image ? e.target.parentElement.clientHeight + y0 : null);
+  if (!x0 || !y0 || !x1 || !y1) {
     console.error("Whoops! There's a bug. Help me by reporting it at https://github.com/sean-krail/website/issues/new");
   }
   const xHalf = x0 + (x0 + x1) / 2;
   const yHalf = y0 + (y0 + y1) / 2;
   const x = e.layerX;
   const y = e.layerY;
-  // console.log({x0, x1, xHalf, yHalf, y0, y1});
-  // console.log({x, y});
-  // console.log(e);
   if (x < xHalf) {
     if (y < yHalf) {
       myface_border.className = "top-left"

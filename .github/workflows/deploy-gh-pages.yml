@@ -8,6 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Build
+        run: |
+          yarn lint
+          yarn build
       - name: Deploy GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1
         with:

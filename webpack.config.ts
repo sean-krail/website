@@ -1,4 +1,5 @@
-const path = require('path');
+import { resolve } from 'path';
+import { Configuration } from 'webpack';
 
 module.exports = {
   devtool: 'source-map',
@@ -27,9 +28,9 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public'),
+    path: resolve(__dirname, 'public'),
   },
   resolve: {
     extensions: [ '.ts', '.js' ],
   },
-};
+} as Configuration;

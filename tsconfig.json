@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "module": "es6",
     "noImplicitAny": true,
     "outDir": "./public/",
@@ -8,6 +9,5 @@
   },
   "include": [
     "src"
-  ],
-  "compileOnSave": false
+  ]
 }

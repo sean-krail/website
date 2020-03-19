@@ -12,15 +12,15 @@
     "start": "TS_NODE_PROJECT=tsconfig-for-webpack-config.json webpack-dev-server -d --content-base ./public"
   },
   "devDependencies": {
-    "@types/node": "^12.12.17",
+    "@types/node": "^12.12.30",
     "@types/webpack": "^4.41.0",
     "@types/webpack-dev-server": "^3.9.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.4",
     "tsconfig-paths": "^3.9.0",
-    "tslint": "^5.20.1",
+    "tslint": "^6.1.0",
     "tslint-loader": "^3.5.4",
-    "typescript": "^3.7.3",
+    "typescript": "~3.8.3",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"

@@ -1,5 +1,18 @@
-.idea/
-
-node_modules/
+# project
 public/*.js
 public/*.js.map
+
+# node
+node_modules/
+
+# yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# ide
+.idea/

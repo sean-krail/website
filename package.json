@@ -12,8 +12,8 @@
     "lint-check": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write src/",
     "format-check": "prettier --check src/",
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

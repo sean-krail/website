@@ -9,11 +9,17 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
         run: |
+          sudo npm uninstall -g parcel-bundler
           yarn
           yarn lint-check
           yarn format-check
-          yarn build
+          # builds silently fail with exit code 129
+          # not sure what is the culprit; everything builds fine locally
+          # after a few failed builds, it finally builds successfully
+          yarn build || yarn build || yarn build || yarn build || yarn build
       - name: Create 404.html
         run : |
           cd dist/

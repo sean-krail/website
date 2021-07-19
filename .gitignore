@@ -1,12 +1,11 @@
 # project
-public/*.js
-public/*.js.map
+dist/
 
-# node
-node_modules/
+# parcel
+.parcel-cache/
 
 # yarn
-.yarn/*
+.yarn/
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
@@ -14,5 +13,6 @@ node_modules/
 !.yarn/sdks
 !.yarn/versions
 
-# ide
+# ide/system
+.DS_Store
 .idea/

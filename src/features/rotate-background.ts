@@ -1,14 +1,18 @@
+import mountDiablo from "url:../images/Mount-Diablo-Bay-View.jpg?as=webp";
+import doloresPark from "url:../images/Mission-Dolores-Park.jpg?as=webp";
+import alamedaSouthShore from "url:../images/Alameda-South-Shore-Beach.jpg?as=webp";
+
 type Image = {
-  src: string,
-  loaded: boolean,
+  src: string;
+  loaded: boolean;
 };
 
 const BACKGROUND_IMAGES: Image[] = [
-  { src: 'i/Mount-Diablo-Bay-View.min.jpg', loaded: false },
-  { src: 'i/Mission-Dolores-Park.min.jpg', loaded: false },
-  { src: 'i/Alameda-South-Shore-Beach.min.jpg', loaded: false },
+  { src: mountDiablo, loaded: false },
+  { src: doloresPark, loaded: false },
+  { src: alamedaSouthShore, loaded: false },
 ];
-const BACKGROUND_ELEMENT = document.getElementById('background');
+const BACKGROUND_ELEMENT = document.getElementById("background");
 
 let backgroundImage = BACKGROUND_IMAGES[0];
 let numLoaded = 0;
@@ -22,7 +26,7 @@ function changeImage() {
   const images = BACKGROUND_IMAGES.filter((image) => image.loaded);
   if (images.length > 1) {
     let index = images.indexOf(backgroundImage);
-    index++;
+    index += 1;
     if (index === images.length) {
       index = 0;
     }
@@ -30,16 +34,17 @@ function changeImage() {
   }
 }
 
-export function continuouslyRotateBackgroundImage() {
+export default function continuouslyRotateBackgroundImage() {
   BACKGROUND_IMAGES.forEach((image) => {
-    const element = document.createElement('img');
+    const element = document.createElement("img");
     element.onload = () => {
+      // eslint-disable-next-line no-param-reassign
       image.loaded = true;
       if (numLoaded === 0) {
         setBackgroundImage(image);
         setInterval(changeImage, 15000);
       }
-      numLoaded++;
+      numLoaded += 1;
       element.remove();
     };
     element.src = image.src;

@@ -11,15 +11,18 @@ jobs:
       - name: Build
         run: |
           yarn
-          yarn lint
+          yarn lint-check
+          yarn format-check
           yarn build
+      - name: Create 404.html
+        run : |
+          cd dist/
+          ln -s index.html 404.html
       - name: Deploy GitHub Pages
         uses: crazy-max/ghaction-github-pages@v1
         with:
-          build_dir: public
+          build_dir: dist
           fqdn: krail.dev
           target_branch: gh-pages
         env:
-          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # https://github.community/t5/GitHub-Actions/Github-action-not-triggering-gh-pages-upon-push/td-p/26869/
-          GITHUB_PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

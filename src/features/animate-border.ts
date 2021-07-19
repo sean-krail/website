@@ -1,6 +1,6 @@
-const myFaceContainer = document.getElementById('myface-container');
-const myFaceBorder = document.getElementById('myface-border');
-const myFaceImage = document.getElementById('myface-image');
+const myFaceContainer = document.getElementById("myface-container");
+const myFaceBorder = document.getElementById("myface-border");
+const myFaceImage = document.getElementById("myface-image");
 
 let runLoop = true;
 let topRight = false;
@@ -9,23 +9,25 @@ let bottomLeft = false;
 let topLeft = false;
 
 function updateBorderRadius() {
-  let className = '';
-  className += topRight ? 'top-right ' : '';
-  className += bottomRight ? 'bottom-right ' : '';
-  className += bottomLeft ? 'bottom-left ' : '';
-  className += topLeft ? 'top-left' : '';
+  let className = "";
+  className += topRight ? "top-right " : "";
+  className += bottomRight ? "bottom-right " : "";
+  className += bottomLeft ? "bottom-left " : "";
+  className += topLeft ? "top-left" : "";
   myFaceBorder.className = className;
 }
 
-export function animateBorder() {
-  myFaceContainer.addEventListener('mouseout', (e) => {
+export default function animateBorder() {
+  myFaceContainer.addEventListener("mouseout", () => {
     runLoop = true;
   });
 
-  myFaceContainer.addEventListener('mousemove', (e) => {
+  myFaceContainer.addEventListener("mousemove", (e) => {
     const target = e.target as HTMLElement;
-    // tslint:disable-next-line:one-variable-per-declaration
-    let x0, y0, x1, y1;
+    let x0;
+    let y0;
+    let x1;
+    let y1;
     if (target === myFaceContainer) {
       x0 = target.clientLeft;
       y0 = target.clientTop;
@@ -38,8 +40,9 @@ export function animateBorder() {
       y1 = target.parentElement.clientHeight + y0;
     }
     if (x0 === null || y0 === null || x1 === null || y1 === null) {
-      // tslint:disable-next-line:no-console max-line-length
-      console.error("Whoops! There's a bug. Help me by reporting it at https://github.com/sean-krail/website/issues/new");
+      console.error(
+        "Whoops! There's a bug. Help me by reporting it: https://github.com/sean-krail/website/issues/new"
+      );
       return;
     }
     runLoop = false;
@@ -59,17 +62,14 @@ export function animateBorder() {
       } else {
         bottomLeft = true;
       }
+    } else if (y < yHalf) {
+      topRight = true;
     } else {
-      if (y < yHalf) {
-        topRight = true;
-      } else {
-        bottomRight = true;
-      }
+      bottomRight = true;
     }
     updateBorderRadius();
   });
 
-  // tslint:disable-next-line:only-arrow-functions
   setInterval(() => {
     if (!runLoop) {
       return;
@@ -83,7 +83,8 @@ export function animateBorder() {
     } else if (bottomLeft) {
       bottomLeft = false;
       topLeft = true;
-    } else { // _this.topLeft
+    } else {
+      // topLeft
       topLeft = false;
       topRight = true;
     }

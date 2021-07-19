@@ -5,7 +5,7 @@ dist/
 .parcel-cache/
 
 # yarn
-.yarn/
+.yarn/*
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins

@@ -17,41 +17,45 @@ function updateBorderRadius() {
   myFaceBorder.className = className;
 }
 
-export default function animateBorder() {
+export default async function animateBorder() {
   myFaceContainer.addEventListener("mouseout", () => {
     runLoop = true;
   });
 
   myFaceContainer.addEventListener("mousemove", (e) => {
-    const target = e.target as HTMLElement;
-    let x0;
-    let y0;
-    let x1;
-    let y1;
-    if (target === myFaceContainer) {
-      x0 = target.clientLeft;
-      y0 = target.clientTop;
-      x1 = target.clientWidth + x0;
-      y1 = target.clientHeight + y0;
-    } else if (target === myFaceImage) {
-      x0 = target.parentElement.clientLeft;
-      y0 = target.parentElement.clientTop;
-      x1 = target.parentElement.clientWidth + x0;
-      y1 = target.parentElement.clientHeight + y0;
+    let target = e.target as HTMLElement;
+    if (target === myFaceImage) {
+      target = target.parentElement;
     }
-    if (x0 === null || y0 === null || x1 === null || y1 === null) {
-      console.error(
-        "Whoops! There's a bug. Help me by reporting it: https://github.com/sean-krail/website/issues/new"
-      );
-      return;
-    }
+
+    /*
+    (x0,y0)------+
+       |         |
+       |  (x,y)  |
+       |         |
+       +------(x1,y1)
+    */
+    const rect = target.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const x0 = 0;
+    const y0 = 0;
+    const x1 = rect.width;
+    const y1 = rect.height;
+    // console.log("x:", x, ", y:", y, ", x0:", x0, ", y0", y0, ", x1:", x1, ", y1:", y1);
+
+    // Pause the border radius loop while mouse is in this element
     runLoop = false;
+
+    /*
+    (x0,y0)---------xHalf------------+
+       |   top-left   |  top-right   |
+     yHalf----------(x,y)----------yHalf
+       | bottom-left  | bottom-right |
+       +------------xHalf---------(x1,y1)
+    */
     const xHalf = x0 + (x0 + x1) / 2;
     const yHalf = y0 + (y0 + y1) / 2;
-    // @ts-ignore
-    const x = e.layerX as number;
-    // @ts-ignore
-    const y = e.layerY as number;
     topRight = false;
     bottomRight = false;
     bottomLeft = false;

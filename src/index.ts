@@ -1,5 +1,10 @@
 import animateBorder from "./features/animate-border";
-import continuouslyRotateBackgroundImage from "./features/rotate-background";
+import slideshowBackground from "./features/slideshow-background";
 
-animateBorder();
-continuouslyRotateBackgroundImage();
+(async () => {
+  animateBorder();
+})();
+
+(async () => {
+  slideshowBackground();
+})();

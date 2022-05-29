@@ -3,8 +3,10 @@
   --foreground-color: white;
   --primary-color: orange;
   --secondary-color: lightblue;
-  --black-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.1);
-  --white-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3), 0 4px 20px 0 rgba(255, 255, 255, 0.2);
+  --black-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  --white-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
+    0 4px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -32,7 +34,8 @@ div#background {
   bottom: 0;
   filter: blur(0px);
   z-index: -1;
-  transition: filter 1s ease-in-out, opacity 2s ease-in-out, background-image 2s ease-in-out;
+  transition: filter 1s ease-in-out, opacity 2s ease-in-out,
+    background-image 2s ease-in-out;
 }
 
 div#card {

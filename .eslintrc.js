@@ -10,5 +10,16 @@ module.exports = {
   extends: [
     'airbnb-typescript/base',
     'prettier',
+    'plugin:import/recommended',
   ],
+  settings: {
+    'import/resolver': {
+      parcel: {
+        rootDir: 'src',
+      },
+    },
+  },
+  rules: {
+    "import/no-unresolved": "warn",
+  },
 };

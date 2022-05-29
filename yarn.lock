@@ -574,7 +574,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/core@npm:2.6.0":
+"@parcel/core@npm:2.6.0, @parcel/core@npm:^2.6.0":
   version: 2.6.0
   resolution: "@parcel/core@npm:2.6.0"
   dependencies:
@@ -2690,6 +2690,15 @@ __metadata:
     debug: ^3.2.7
     resolve: ^1.20.0
   checksum: 6266733af1e112970e855a5bcc2d2058fb5ae16ad2a6d400705a86b29552b36131ffc5581b744c23d550de844206fb55e9193691619ee4dbf225c4bde526b1c8
+  languageName: node
+  linkType: hard
+
+"eslint-import-resolver-parcel@npm:^1.10.6":
+  version: 1.10.6
+  resolution: "eslint-import-resolver-parcel@npm:1.10.6"
+  dependencies:
+    resolve: ^1.17.0
+  checksum: 21ad016567038b9a76cf2ab6755d172f640e907855e520f70073b8302dd9cdfde1473755a7952cc072ea3670e4b7b623b2b933316b6f20fb710382170f014f75
   languageName: node
   linkType: hard
 
@@ -5353,7 +5362,7 @@ resolve@^1.20.0:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.22.0":
+"resolve@npm:^1.17.0, resolve@npm:^1.22.0":
   version: 1.22.0
   resolution: "resolve@npm:1.22.0"
   dependencies:
@@ -5366,17 +5375,7 @@ resolve@^1.20.0:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
-  version: 1.20.0
-  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
-  dependencies:
-    is-core-module: ^2.2.0
-    path-parse: ^1.0.6
-  checksum: a0dd7d16a8e47af23afa9386df2dff10e3e0debb2c7299a42e581d9d9b04d7ad5d2c53f24f1e043f7b3c250cbdc71150063e53d0b6559683d37f790b7c8c3cd5
-  languageName: node
-  linkType: hard
-
-"resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.17.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>":
   version: 1.22.0
   resolution: "resolve@patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=07638b"
   dependencies:
@@ -5386,6 +5385,16 @@ resolve@^1.20.0:
   bin:
     resolve: bin/resolve
   checksum: c79ecaea36c872ee4a79e3db0d3d4160b593f2ca16e031d8283735acd01715a203607e9ded3f91f68899c2937fa0d49390cddbe0fb2852629212f3cda283f4a7
+  languageName: node
+  linkType: hard
+
+"resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
+  version: 1.20.0
+  resolution: "resolve@patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=07638b"
+  dependencies:
+    is-core-module: ^2.2.0
+    path-parse: ^1.0.6
+  checksum: a0dd7d16a8e47af23afa9386df2dff10e3e0debb2c7299a42e581d9d9b04d7ad5d2c53f24f1e043f7b3c250cbdc71150063e53d0b6559683d37f790b7c8c3cd5
   languageName: node
   linkType: hard
 
@@ -6266,6 +6275,7 @@ resolve@^1.20.0:
   resolution: "website@workspace:."
   dependencies:
     "@babel/core": ^7.18.2
+    "@parcel/core": ^2.6.0
     "@parcel/transformer-image": ^2.6.0
     "@types/node": ^17.0.36
     "@typescript-eslint/eslint-plugin": ^5.26.0
@@ -6276,6 +6286,7 @@ resolve@^1.20.0:
     eslint-config-airbnb-typescript: ^17.0.0
     eslint-config-prettier: ^8.5.0
     eslint-import-resolver-node: ^0.3.6
+    eslint-import-resolver-parcel: ^1.10.6
     eslint-plugin-import: ^2.26.0
     husky: ^8.0.1
     lint-staged: ^12.4.2

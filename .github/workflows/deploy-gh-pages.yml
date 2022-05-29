@@ -28,7 +28,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v1
         with:
           build_dir: dist
-          fqdn: krail.dev
+          fqdn: seankrail.dev
           target_branch: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

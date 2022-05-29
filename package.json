@@ -30,16 +30,12 @@
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-parcel": "^1.10.6",
     "eslint-plugin-import": "^2.26.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^12.4.2",
+    "husky": "^8.0.0",
     "node-gyp": "^9.0.0",
     "parcel": "^2.6.0",
     "postcss": "^8.4.14",
     "prettier": "^2.6.2",
     "sharp": "^0.29.1",
     "typescript": "^4.7.2"
-  },
-  "lint-staged": {
-    "**/*": "lint && format"
   }
 }

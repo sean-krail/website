@@ -16,3 +16,4 @@ dist/
 # ide/system
 .DS_Store
 .idea/
+*.code-workspace

@@ -9,6 +9,46 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: Build 1/5
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: |
+          sudo npm uninstall -g parcel-bundler
+
+      - name: Build 2/5
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: |
+          sudo npm uninstall -g parcel-bundler
+          yarn
+
+      - name: Build 3/5
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: |
+          sudo npm uninstall -g parcel-bundler
+          yarn
+          yarn lint-check
+
+      - name: Build 4/5
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: |
+          sudo npm uninstall -g parcel-bundler
+          yarn
+          yarn lint-check
+          yarn format-check
+
+      - name: Build 5/5
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+        run: |
+          sudo npm uninstall -g parcel-bundler
+          yarn
+          yarn lint-check
+          yarn format-check
+          yarn build || yarn build || yarn build || yarn build || yarn build
+
       - name: Build
         env:
           NODE_OPTIONS: --max-old-space-size=4096

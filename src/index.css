@@ -86,8 +86,7 @@ div#myface-border.top-left {
 }
 
 img#myface-image {
-  height: 110px;
-  margin-left: -20px;
+  height: 100px;
   transition: margin 0.5s ease-in-out;
 }
 

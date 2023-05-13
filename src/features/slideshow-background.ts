@@ -14,7 +14,6 @@ const BACKGROUND_IMAGES: Image[] = [
   { src: alamedaSouthShore, loaded: false },
 ];
 const BACKGROUND_ELEMENT = document.getElementById("background");
-const CARD_ELEMENT = document.getElementById("card");
 
 let backgroundImage = BACKGROUND_IMAGES[0];
 let numLoaded = 0;
@@ -26,9 +25,6 @@ function setBackgroundImage(image: Image, first?: boolean) {
   }
   BACKGROUND_ELEMENT.style.backgroundImage = `url(${image.src})`;
   BACKGROUND_ELEMENT.style.opacity = "1";
-  if (first) {
-    CARD_ELEMENT.style.boxShadow = "var(--black-box-shadow)";
-  }
 }
 
 function changeImage() {
@@ -43,18 +39,28 @@ function changeImage() {
   }
 }
 
-export default async function slideshowBackground() {
-  BACKGROUND_IMAGES.forEach((image) => {
-    const element = new Image();
-    element.onload = () => {
-      image.loaded = true;
-      if (numLoaded === 0) {
-        setBackgroundImage(image, true);
-        setInterval(changeImage, 15000);
+function startSlideshow(mediaQuery: MediaQueryList | MediaQueryListEvent) {
+  if (mediaQuery.matches) {
+    BACKGROUND_IMAGES.forEach((image) => {
+      if (!image.element) {
+        const element = new Image();
+        element.onload = () => {
+          image.loaded = true;
+          if (numLoaded === 0) {
+            setBackgroundImage(image, true);
+            setInterval(changeImage, 15000);
+          }
+          numLoaded += 1;
+        };
+        element.src = image.src;
+        image.element = element;
       }
-      numLoaded += 1;
-    };
-    element.src = image.src;
-    image.element = element;
-  });
+    });
+  }
+}
+
+export default async function slideshowBackground() {
+  const mediaQuery = window.matchMedia("(min-width: 1000px)");
+  startSlideshow(mediaQuery);
+  mediaQuery.addEventListener("change", startSlideshow);
 }

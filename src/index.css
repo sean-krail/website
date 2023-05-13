@@ -1,152 +1,190 @@
+@import "npm:normalize.css/normalize.css";
+
 :root {
-  --background-color: black;
-  --foreground-color: white;
+  --background-color: white;
+  --text-color: black;
   --primary-color: darkorange;
   --secondary-color: orange;
-  --black-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-    0 4px 20px 0 rgba(0, 0, 0, 0.1);
-  --white-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
+  --card-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
     0 4px 20px 0 rgba(255, 255, 255, 0.2);
+  --button-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  --myface-side-length: 150px;
 }
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-x: scroll;
-  overflow-y: scroll;
-  position: relative;
-  background-color: var(--background-color);
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-div#background {
-  background-color: var(--background-color);
-  opacity: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  filter: blur(0px);
-  z-index: -1;
-  transition: filter 1s ease-in-out, opacity 2s ease-in-out,
-    background-image 2s ease-in-out;
-}
-
-div#card {
-  width: 350px;
-  height: 500px;
-  margin: 50px;
-  background-color: var(--foreground-color);
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
-  overflow: hidden;
-  box-shadow: var(--white-box-shadow);
-  text-align: center;
-  transition: box-shadow 1s ease-in-out;
-}
-
-div#card:hover + div#background {
-  filter: blur(2px);
-}
-
-div#myface-container,
-div#myface-border {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-}
-div#myface-container {
-  margin: 15px auto;
-}
-div#myface-border {
-  border-radius: 50px;
-  overflow: hidden;
-  transition: border-radius 0.5s ease-in-out;
-}
-div#myface-border.top-right {
-  border-top-right-radius: 5px;
-}
-div#myface-border.bottom-right {
-  border-bottom-right-radius: 5px;
-}
-div#myface-border.bottom-left {
-  border-bottom-left-radius: 5px;
-}
-div#myface-border.top-left {
-  border-top-left-radius: 5px;
-}
-
-img#myface-image {
-  height: 100px;
-  transition: margin 0.5s ease-in-out;
-}
-
-#card h1 {
-  color: var(--primary-color);
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-#card p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#card ul {
-  padding: 0;
+.gentle-flex {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  list-style-type: none;
+  gap: 1ch;
 }
 
-#card li {
-  width: 200px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  box-shadow: var(--black-box-shadow);
-  border-radius: 25px;
-  margin: 8px;
+html {
+  font-family: sans-serif;
 }
 
-#card a {
+body {
   width: 100%;
   height: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 25px;
-  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-#card a:focus {
+#card {
+  background-color: var(--background-color);
+  text-align: center;
+}
+
+#myface-and-text {
+  gap: 3ch;
+}
+
+#myface-container,
+#myface {
+  width: var(--myface-side-length);
+  height: var(--myface-side-length);
+}
+#myface {
+  border-radius: var(--myface-side-length);
+  transition: border-radius 0.5s ease-in-out;
+}
+#myface.top-right {
+  border-top-right-radius: 10px;
+}
+#myface.bottom-right {
+  border-bottom-right-radius: 10px;
+}
+#myface.bottom-left {
+  border-bottom-left-radius: 10px;
+}
+#myface.top-left {
+  border-top-left-radius: 10px;
+}
+
+h1,
+p {
+  margin: 0;
+}
+h1 {
+  color: var(--primary-color);
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+ul.gentle-flex {
+  gap: 3ch;
+}
+li {
+  width: 200px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: var(--background-color);
+  box-shadow: var(--button-box-shadow);
+}
+li a {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 25px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+li a:focus {
   outline: none;
   border: 3px solid var(--primary-color);
 }
-
-#card a:hover {
+li a:hover {
   background-color: var(--secondary-color);
   cursor: pointer;
 }
-
-#card a:active {
+li a:active {
   background-color: var(--primary-color);
   border: 3px solid var(--primary-color);
+}
+
+#background {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    --text-color: white;
+    --card-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    --button-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
+      0 4px 20px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  li {
+    background-color: var(--secondary-color);
+  }
+  li a {
+    color: var(--background-color);
+  }
+  li a:focus {
+    outline: none;
+    border: 3px solid var(--text-color);
+  }
+  li a:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+  }
+  li a:active {
+    background-color: var(--text-color);
+    border: 3px solid var(--text-color);
+  }
+}
+
+@media (orientation: portrait) {
+  .gentle-flex.landscape-row {
+    gap: 3ch;
+  }
+}
+@media (orientation: landscape) {
+  .gentle-flex.landscape-row {
+    flex-direction: row;
+    gap: 10ch;
+  }
+  ul.gentle-flex {
+    height: 100%;
+    justify-content: space-evenly;
+    gap: 1ch;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #background {
+    display: initial;
+    background-color: var(--background-color);
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(0px);
+    z-index: -1;
+    transition: filter 1s ease-in-out, opacity 2s ease-in-out,
+      background-image 2s ease-in-out;
+  }
+
+  #card:hover + #background {
+    filter: blur(2px);
+  }
+
+  #card {
+    padding: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 50px;
+    box-shadow: var(--card-box-shadow);
+    transition: box-shadow 1s ease-in-out;
+  }
 }

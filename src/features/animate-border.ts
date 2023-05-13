@@ -1,6 +1,5 @@
 const myFaceContainer = document.getElementById("myface-container");
-const myFaceBorder = document.getElementById("myface-border");
-const myFaceImage = document.getElementById("myface-image");
+const myFace = document.getElementById("myface");
 
 let runLoop = true;
 let topRight = false;
@@ -14,7 +13,7 @@ function updateBorderRadius() {
   className += bottomRight ? "bottom-right " : "";
   className += bottomLeft ? "bottom-left " : "";
   className += topLeft ? "top-left" : "";
-  myFaceBorder.className = className;
+  myFace.className = className;
 }
 
 export default async function animateBorder() {
@@ -23,11 +22,6 @@ export default async function animateBorder() {
   });
 
   myFaceContainer.addEventListener("mousemove", (e) => {
-    let target = e.target as HTMLElement;
-    if (target === myFaceImage) {
-      target = target.parentElement;
-    }
-
     /*
     (x0,y0)------+
        |         |
@@ -35,7 +29,7 @@ export default async function animateBorder() {
        |         |
        +------(x1,y1)
     */
-    const rect = target.getBoundingClientRect();
+    const rect = myFaceContainer.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const x0 = 0;

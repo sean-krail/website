@@ -12,19 +12,22 @@
     "lint-check": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write src/",
     "format-check": "prettier --check src/",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "clean": "yarn rimraf dist/",
+    "start": "yarn clean && parcel src/*.html",
+    "build": "yarn clean && parcel build src/*.html"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.4",
+    "@babel/core": "^7.21.8",
+    "@parcel/compressor-brotli": "^2.8.3",
+    "@parcel/config-default": "^2.8.3",
     "@parcel/core": "^2.8.3",
     "@parcel/transformer-image": "^2.8.3",
-    "@types/node": "^18.11.18",
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
+    "@types/node": "^14.18.47",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
     "babel-types": "^6.26.0",
-    "cssnano": "^6.0.0",
-    "eslint": "^8.38.0",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.40.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-node": "^0.3.7",
@@ -32,11 +35,14 @@
     "eslint-plugin-import": "^2.27.5",
     "husky": "^8.0.3",
     "node-gyp": "^9.3.1",
+    "normalize.css": "^8.0.1",
     "parcel": "^2.8.3",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
     "sharp": "^0.31.1",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.4"
   },
-  "packageManager": "yarn@3.2.1"
+  "browserslist": "defaults",
+  "packageManager": "yarn@3.5.1"
 }

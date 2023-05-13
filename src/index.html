@@ -3,21 +3,15 @@
     <meta charset="utf-8" />
     <title>Sean Krail - Software Engineer</title>
     <!-- mobile support -->
-    <meta name="viewport" width="device-width, initial-scale=1" />
-    <!-- preload images and javascript -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- preload image and javascript -->
     <link
       rel="preload"
       as="image"
-      href="url:./images/Mount-Diablo-Bay-View-Blurred.jpg?as=webp"
+      href="url:./images/myface.jpg?width=150&as=avif"
     />
-    <link rel="preload" as="image" href="url:./images/myface.jpg?as=webp" />
-    <link rel="preload" as="script" href="./index.ts" />
+    <script defer type="module" src="./index.ts"></script>
     <!-- css -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
-    />
     <link rel="stylesheet" type="text/css" href="./index.css" />
     <!-- favicon links (https://favicon.io/favicon-converter/) -->
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -47,27 +41,43 @@
       gtag("config", "G-2XSXPQXF7P");
     </script>
   </head>
-  <body>
-    <div id="card">
-      <div id="myface-container">
-        <div id="myface-border" class="bottom-right">
-          <img id="myface-image" src="url:./images/myface.jpg?as=webp" />
+  <body class="gentle-flex">
+    <div id="card" class="gentle-flex landscape-row">
+      <div id="myface-and-text" class="gentle-flex">
+        <div id="myface-container">
+          <picture>
+            <source
+              srcset="url:./images/myface.jpg?width=150&as=avif"
+              type="image/avif"
+            />
+            <source
+              srcset="url:./images/myface.jpg?width=150&as=webp"
+              type="image/webp"
+            />
+            <img
+              id="myface"
+              class="bottom-right"
+              src="url:./images/myface.jpg?width=150"
+            />
+          </picture>
         </div>
+        <h1>Sean Krail</h1>
+        <p>Computer Engineer<br /><code>Writing Backend Software</code></p>
+        <p>Philadelphia, PA</p>
       </div>
-      <h1>Sean Krail</h1>
-      <p>Computer Engineer<br /><code>Writing Backend Software</code></p>
-      <p><s>San Francisco</s> <b>→</b> <s>Seattle</s> <b>→</b> Philadelphia</p>
-      <ul>
-        <li>
+      <ul class="gentle-flex">
+        <li class="gentle-flex">
           <a
+            class="gentle-flex"
             target="_blank"
             href="./seankrail-resume.pdf"
             onclick="gtag('event','page_view',{page_title:'Resume'})"
             >Resume</a
           >
         </li>
-        <li>
+        <li class="gentle-flex">
           <a
+            class="gentle-flex"
             title="sean@krail.dev"
             target="_blank"
             href="mailto:sean@krail.dev?subject=Let%27s%20connect!"
@@ -75,16 +85,18 @@
             >Email</a
           >
         </li>
-        <li>
+        <li class="gentle-flex">
           <a
+            class="gentle-flex"
             target="_blank"
             href="https://github.com/sean-krail"
             onclick="gtag('event','page_view',{page_title:'GitHub'})"
             >GitHub</a
           >
         </li>
-        <li>
+        <li class="gentle-flex">
           <a
+            class="gentle-flex"
             target="_blank"
             href="https://linkedin.com/in/seankrail"
             onclick="gtag('event','page_view',{page_title:'LinkedIn'})"
@@ -94,6 +106,5 @@
       </ul>
     </div>
     <div id="background"></div>
-    <script type="module" src="./index.ts"></script>
   </body>
 </html>

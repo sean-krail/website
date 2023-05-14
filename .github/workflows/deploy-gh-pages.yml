@@ -30,15 +30,11 @@ jobs:
           # after a few failed builds, it finally builds successfully
           yarn build || yarn build || yarn build || yarn build || yarn build
 
-      - name: Create 404.html
+      - name: Create 404.html and other redirects
         run : |
           cd dist/
           ln -s index.html 404.html
-
-      - name: Create resume
-        run : |
-          cd dist/
-          ln -s seankrail-resume.pdf resume
+          ln -s seankrail-resume.pdf resume.pdf
 
       - name: Create git history file
         run: |

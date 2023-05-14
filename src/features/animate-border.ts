@@ -1,7 +1,7 @@
-const myFaceContainer = document.getElementById("myface-container");
-const myFace = document.getElementById("myface");
+const MY_FACE_CONTAINER = document.getElementById("myface-container");
+const MY_FACE = document.getElementById("myface");
 
-let runLoop = true;
+let intervalId = -1;
 let topRight = false;
 let bottomRight = true;
 let bottomLeft = false;
@@ -13,15 +13,38 @@ function updateBorderRadius() {
   className += bottomRight ? "bottom-right " : "";
   className += bottomLeft ? "bottom-left " : "";
   className += topLeft ? "top-left" : "";
-  myFace.className = className;
+  MY_FACE.className = className;
+}
+
+function startLoop() {
+  intervalId = setInterval(() => {
+    if (topRight) {
+      topRight = false;
+      bottomRight = true;
+    } else if (bottomRight) {
+      bottomRight = false;
+      bottomLeft = true;
+    } else if (bottomLeft) {
+      bottomLeft = false;
+      topLeft = true;
+    } else {
+      // topLeft
+      topLeft = false;
+      topRight = true;
+    }
+    updateBorderRadius();
+  }, 3219);
 }
 
 export default async function animateBorder() {
-  myFaceContainer.addEventListener("mouseout", () => {
-    runLoop = true;
+  MY_FACE_CONTAINER.addEventListener("mouseout", () => {
+    startLoop();
   });
 
-  myFaceContainer.addEventListener("mousemove", (e) => {
+  MY_FACE_CONTAINER.addEventListener("mousemove", (e) => {
+    // Pause the border radius loop while mouse is in this element
+    clearInterval(intervalId);
+
     /*
     (x0,y0)------+
        |         |
@@ -29,7 +52,7 @@ export default async function animateBorder() {
        |         |
        +------(x1,y1)
     */
-    const rect = myFaceContainer.getBoundingClientRect();
+    const rect = MY_FACE_CONTAINER.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     const x0 = 0;
@@ -37,9 +60,6 @@ export default async function animateBorder() {
     const x1 = rect.width;
     const y1 = rect.height;
     // console.log("x:", x, ", y:", y, ", x0:", x0, ", y0", y0, ", x1:", x1, ", y1:", y1);
-
-    // Pause the border radius loop while mouse is in this element
-    runLoop = false;
 
     /*
     (x0,y0)---------xHalf------------+
@@ -68,24 +88,5 @@ export default async function animateBorder() {
     updateBorderRadius();
   });
 
-  setInterval(() => {
-    if (!runLoop) {
-      return;
-    }
-    if (topRight) {
-      topRight = false;
-      bottomRight = true;
-    } else if (bottomRight) {
-      bottomRight = false;
-      bottomLeft = true;
-    } else if (bottomLeft) {
-      bottomLeft = false;
-      topLeft = true;
-    } else {
-      // topLeft
-      topLeft = false;
-      topRight = true;
-    }
-    updateBorderRadius();
-  }, 3219);
+  startLoop();
 }

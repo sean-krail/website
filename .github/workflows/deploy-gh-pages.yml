@@ -35,6 +35,11 @@ jobs:
           cd dist/
           ln -s index.html 404.html
 
+      - name: Create resume
+        run : |
+          cd dist/
+          ln -s seankrail-resume.pdf resume
+
       - name: Create git history file
         run: |
           git log > dist/log

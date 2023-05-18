@@ -1236,7 +1236,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@parcel/source-map", "npm:2.1.1"],\
             ["@parcel/utils", "npm:2.8.3"],\
             ["nullthrows", "npm:1.1.1"],\
-            ["terser", "npm:5.14.1"]\
+            ["terser", "npm:5.17.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7241,10 +7241,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["terser", [\
-        ["npm:5.14.1", {\
-          "packageLocation": "./.yarn/cache/terser-npm-5.14.1-2c67379fd0-7b0e51f3d1.zip/node_modules/terser/",\
+        ["npm:5.17.4", {\
+          "packageLocation": "./.yarn/cache/terser-npm-5.17.4-de741ec696-4bb4bbee17.zip/node_modules/terser/",\
           "packageDependencies": [\
-            ["terser", "npm:5.14.1"],\
+            ["terser", "npm:5.17.4"],\
             ["@jridgewell/source-map", "npm:0.3.2"],\
             ["acorn", "npm:8.7.1"],\
             ["commander", "npm:2.20.3"],\

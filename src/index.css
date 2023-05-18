@@ -1,4 +1,7 @@
 @import "npm:normalize.css/normalize.css";
+@import "npm:@fontsource/lato";
+@import "npm:@fontsource/raleway";
+@import "npm:@fontsource/roboto-mono";
 
 :root {
   --background-color: white;
@@ -21,7 +24,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -67,7 +70,12 @@ p {
   margin: 0;
 }
 h1 {
+  font-family: "Raleway", sans-serif;
   color: var(--primary-color);
+}
+code {
+  font-family: "Roboto Mono", monospace;
+  font-size: 0.9em;
 }
 ul {
   list-style-type: none;

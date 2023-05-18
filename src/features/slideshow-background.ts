@@ -18,11 +18,8 @@ const BACKGROUND_ELEMENT = document.getElementById("background");
 let backgroundImage = BACKGROUND_IMAGES[0];
 let numLoaded = 0;
 
-function setBackgroundImage(image: Image, first?: boolean) {
+function setBackgroundImage(image: Image) {
   backgroundImage = image;
-  if (!first) {
-    BACKGROUND_ELEMENT.style.opacity = "0";
-  }
   BACKGROUND_ELEMENT.style.backgroundImage = `url(${image.src})`;
   BACKGROUND_ELEMENT.style.opacity = "1";
 }
@@ -47,7 +44,7 @@ function startSlideshow(mediaQuery: MediaQueryList | MediaQueryListEvent) {
         element.onload = () => {
           image.loaded = true;
           if (numLoaded === 0) {
-            setBackgroundImage(image, true);
+            setBackgroundImage(image);
             setInterval(changeImage, 15000);
           }
           numLoaded += 1;

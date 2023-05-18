@@ -12,6 +12,8 @@
     0 4px 20px 0 rgba(255, 255, 255, 0.2);
   --button-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 4px 20px 0 rgba(0, 0, 0, 0.1);
+  --inner-button-box-shadow: inset 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    inset 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   --myface-side-length: 150px;
 }
 
@@ -89,7 +91,6 @@ li {
   height: 40px;
   border-radius: 40px;
   background-color: var(--background-color);
-  box-shadow: var(--button-box-shadow);
 }
 li a {
   width: 100%;
@@ -98,10 +99,11 @@ li a {
   border-radius: 25px;
   color: var(--text-color);
   text-decoration: none;
+  box-shadow: var(--button-box-shadow);
 }
 li a:focus {
   outline: none;
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--secondary-color);
 }
 li a:hover {
   background-color: var(--secondary-color);
@@ -109,7 +111,8 @@ li a:hover {
 }
 li a:active {
   background-color: var(--primary-color);
-  border: 3px solid var(--primary-color);
+  border: none;
+  box-shadow: var(--inner-button-box-shadow);
 }
 
 #background {
@@ -118,41 +121,26 @@ li a:active {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: black;
+    --background-color: #222;
     --text-color: white;
-    --card-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-      0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    --card-box-shadow: 0 4px 8px 0 #22222233, 0 4px 20px 0 #2222221a;
     --button-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
       0 4px 20px 0 rgba(255, 255, 255, 0.2);
   }
 
-  li {
-    background-color: var(--secondary-color);
-  }
-  li a {
-    color: var(--background-color);
-  }
-  li a:focus {
-    outline: none;
-    border: 3px solid var(--text-color);
-  }
-  li a:hover {
-    background-color: var(--primary-color);
-    cursor: pointer;
-  }
+  li a:hover,
   li a:active {
-    background-color: var(--text-color);
-    border: 3px solid var(--text-color);
+    color: black;
   }
 }
 
 @media (orientation: portrait) {
-  .gentle-flex.landscape-row {
+  .gentle-flex.landscape-row-portrait-column {
     gap: 3ch;
   }
 }
 @media (orientation: landscape) {
-  .gentle-flex.landscape-row {
+  .gentle-flex.landscape-row-portrait-column {
     flex-direction: row;
     gap: 10ch;
   }
@@ -166,7 +154,6 @@ li a:active {
 @media only screen and (min-width: 1000px) {
   #background {
     display: initial;
-    background-color: var(--background-color);
     opacity: 0;
     background-size: cover;
     background-position: center;

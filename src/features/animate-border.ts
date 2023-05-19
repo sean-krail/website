@@ -17,6 +17,7 @@ function updateBorderRadius() {
 }
 
 function startLoop() {
+  clearInterval(intervalId);
   intervalId = setInterval(() => {
     if (topRight) {
       topRight = false;
@@ -37,9 +38,8 @@ function startLoop() {
 }
 
 export default async function animateBorder() {
-  MY_FACE_CONTAINER.addEventListener("mouseout", () => {
-    startLoop();
-  });
+  MY_FACE_CONTAINER.addEventListener("mouseout", () => startLoop());
+  MY_FACE_CONTAINER.addEventListener("mouseup", () => startLoop());
 
   MY_FACE_CONTAINER.addEventListener("mousemove", (e) => {
     // Pause the border radius loop while mouse is in this element

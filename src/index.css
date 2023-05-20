@@ -53,11 +53,12 @@
 :root {
   --background-color: white;
   --text-color: black;
+  --anchor-text-color: #0969da;
   --focus-text-color: black;
   --hover-text-color: black;
   --active-text-color: black;
-  --primary-color: darkorange;
-  --secondary-color: orange;
+  --primary-color: rgb(255, 140, 0);
+  --secondary-color: rgb(255, 130, 0);
   --card-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
     0 4px 20px 0 rgba(255, 255, 255, 0.2);
   --button-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -69,14 +70,13 @@
 }
 
 [data-theme="dark"] {
-  --background-color: #222;
+  --background-color: #333;
   --text-color: white;
+  --anchor-text-color: #58a6ff;
   --focus-text-color: white;
   --hover-text-color: black;
   --active-text-color: black;
-  --card-box-shadow: 0 4px 8px 0 #22222233, 0 4px 20px 0 #2222221a;
-  --button-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
-    0 4px 20px 0 rgba(255, 255, 255, 0.2);
+  --card-box-shadow: 0 4px 8px 0 #33333333, 0 4px 20px 0 #3333331a;
 }
 
 .gentle-flex {
@@ -89,6 +89,8 @@
 
 html {
   font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -114,6 +116,7 @@ body {
 }
 #myface {
   border-radius: var(--myface-side-length);
+  will-change: transform;
   transition: border-radius 0.5s ease-in-out;
 }
 #myface.top-right {
@@ -136,6 +139,15 @@ p {
 h1 {
   font-family: "Raleway", sans-serif;
   color: var(--primary-color);
+}
+a {
+  text-decoration: none;
+}
+a {
+  color: var(--anchor-text-color);
+}
+a:hover {
+  text-decoration: underline;
 }
 code {
   font-family: "Roboto Mono", monospace;
@@ -160,22 +172,22 @@ li a {
   box-sizing: border-box;
   border-radius: 25px;
   color: var(--text-color);
-  text-decoration: none;
   box-shadow: var(--button-box-shadow);
 }
 li a:focus {
   color: var(--focus-text-color);
   outline: none;
-  border: 3px solid var(--secondary-color);
+  border: 3px solid var(--primary-color);
 }
 li a:hover {
   color: var(--hover-text-color);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   cursor: pointer;
+  text-decoration: none;
 }
 li a:active {
-  background-color: var(--primary-color);
   color: var(--active-text-color);
+  background-color: var(--secondary-color);
   border: none;
   box-shadow: var(--inner-button-box-shadow);
 }

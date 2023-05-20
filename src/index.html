@@ -15,18 +15,21 @@
       as="font"
       type="font/woff2"
       href="npm:@fontsource/lato/files/lato-latin-400-normal.woff2"
+      crossorigin
     />
     <link
       rel="preload"
       as="font"
       type="font/woff2"
       href="npm:@fontsource/raleway/files/raleway-latin-400-normal.woff2"
+      crossorigin
     />
     <link
       rel="preload"
       as="font"
       type="font/woff2"
       href="npm:@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff2"
+      crossorigin
     />
     <script defer type="module" src="./index.ts"></script>
     <!-- css -->
@@ -45,6 +48,20 @@
       sizes="32x32"
       href="./favicon-32x32.png"
     />
+    <!-- Light/dark theme -->
+    <script>
+      function isDarkTheme() {
+        const queryString = window.location.search.substring(1);
+        return (
+          queryString.includes("dark") ||
+          (!queryString.includes("light") &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        );
+      }
+      if (isDarkTheme()) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script
       async

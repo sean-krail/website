@@ -53,6 +53,9 @@
 :root {
   --background-color: white;
   --text-color: black;
+  --focus-text-color: black;
+  --hover-text-color: black;
+  --active-text-color: black;
   --primary-color: darkorange;
   --secondary-color: orange;
   --card-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
@@ -63,6 +66,17 @@
     inset 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   --myface-side-length: 150px;
   --fontsource-display: block;
+}
+
+[data-theme="dark"] {
+  --background-color: #222;
+  --text-color: white;
+  --focus-text-color: white;
+  --hover-text-color: black;
+  --active-text-color: black;
+  --card-box-shadow: 0 4px 8px 0 #22222233, 0 4px 20px 0 #2222221a;
+  --button-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
+    0 4px 20px 0 rgba(255, 255, 255, 0.2);
 }
 
 .gentle-flex {
@@ -150,36 +164,24 @@ li a {
   box-shadow: var(--button-box-shadow);
 }
 li a:focus {
+  color: var(--focus-text-color);
   outline: none;
   border: 3px solid var(--secondary-color);
 }
 li a:hover {
+  color: var(--hover-text-color);
   background-color: var(--secondary-color);
   cursor: pointer;
 }
 li a:active {
   background-color: var(--primary-color);
+  color: var(--active-text-color);
   border: none;
   box-shadow: var(--inner-button-box-shadow);
 }
 
 #background {
   display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-color: #222;
-    --text-color: white;
-    --card-box-shadow: 0 4px 8px 0 #22222233, 0 4px 20px 0 #2222221a;
-    --button-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.3),
-      0 4px 20px 0 rgba(255, 255, 255, 0.2);
-  }
-
-  li a:hover,
-  li a:active {
-    color: black;
-  }
 }
 
 @media (orientation: portrait) {

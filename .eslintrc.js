@@ -1,21 +1,15 @@
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: './tsconfig.json',
+    project: "./tsconfig.json",
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
-  extends: [
-    'airbnb-typescript/base',
-    'prettier',
-    'plugin:import/recommended',
-  ],
+  plugins: ["@typescript-eslint"],
+  extends: ["airbnb-typescript/base", "prettier", "plugin:import/recommended"],
   settings: {
-    'import/resolver': {
+    "import/resolver": {
       parcel: {
-        rootDir: 'src',
+        rootDir: "src",
       },
     },
   },

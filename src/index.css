@@ -1,54 +1,7 @@
 @import "npm:normalize.css/normalize.css";
-
-/* Uncomment below block and delete the @font-face blocks once
-   https://github.com/fontsource/fontsource/issues/121 is released
-
 @import "npm:@fontsource/lato/latin-400.css";
 @import "npm:@fontsource/raleway/latin-400.css";
 @import "npm:@fontsource/roboto-mono/latin-400.css";
-*/
-
-/* Copied from the fontsource packages w/ added --fontsource-display var */
-@font-face {
-  font-family: Lato;
-  font-style: normal;
-  font-display: var(--fontsource-display, swap);
-  font-weight: 400;
-  src: url("npm:@fontsource/lato/files/lato-latin-400-normal.woff2")
-      format("woff2"),
-    url("npm:@fontsource/lato/files/lato-all-400-normal.woff") format("woff");
-  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC,
-    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
-    U+FFFD;
-}
-
-@font-face {
-  font-family: Raleway;
-  font-style: normal;
-  font-display: var(--fontsource-display, swap);
-  font-weight: 400;
-  src: url("npm:@fontsource/raleway/files/raleway-latin-400-normal.woff2")
-      format("woff2"),
-    url("npm:@fontsource/raleway/files/raleway-all-400-normal.woff")
-      format("woff");
-  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC,
-    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
-    U+FFFD;
-}
-
-@font-face {
-  font-family: Roboto Mono;
-  font-style: normal;
-  font-display: var(--fontsource-display, swap);
-  font-weight: 400;
-  src: url("npm:@fontsource/roboto-mono/files/roboto-mono-latin-400-normal.woff2")
-      format("woff2"),
-    url("npm:@fontsource/roboto-mono/files/roboto-mono-all-400-normal.woff")
-      format("woff");
-  unicode-range: U+??, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC,
-    U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF,
-    U+FFFD;
-}
 
 :root {
   --background-color: white;
@@ -114,10 +67,14 @@ body {
   width: var(--myface-side-length);
   height: var(--myface-side-length);
 }
+#myface-container {
+  user-select: none;
+}
 #myface {
   border-radius: var(--myface-side-length);
   will-change: transform;
   transition: border-radius 0.5s ease-in-out;
+  pointer-events: none;
 }
 #myface.top-right {
   border-top-right-radius: 10px;

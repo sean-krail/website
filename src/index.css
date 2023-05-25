@@ -2,6 +2,7 @@
 @import "npm:@fontsource/lato/latin-400.css";
 @import "npm:@fontsource/raleway/latin-400.css";
 @import "npm:@fontsource/roboto-mono/latin-400.css";
+@import "npm:@fontsource/material-icons-outlined";
 
 :root {
   --background-color: white;
@@ -20,6 +21,8 @@
     inset 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   --myface-side-length: 150px;
   --fontsource-display: block;
+  --dark-mode-display: none;
+  --light-mode-display: block;
 }
 
 [data-theme="dark"] {
@@ -30,6 +33,54 @@
   --hover-text-color: black;
   --active-text-color: black;
   --card-box-shadow: 0 4px 8px 0 #33333333, 0 4px 20px 0 #3333331a;
+  --dark-mode-display: block;
+  --light-mode-display: none;
+}
+
+.material-icons-outlined {
+  font-family: "Material Icons Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.dark-light-theme-selector-container {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+.dark-theme-selector,
+.light-theme-selector {
+  padding: 10px;
+}
+.dark-theme-selector {
+  display: var(--dark-mode-display);
+}
+.light-theme-selector {
+  display: var(--light-mode-display);
 }
 
 .gentle-flex {
@@ -161,7 +212,7 @@ li a:active {
 @media (orientation: landscape) {
   .gentle-flex.landscape-row-portrait-column {
     flex-direction: row;
-    gap: 10ch;
+    gap: 6ch;
   }
   ul.gentle-flex {
     height: 100%;
@@ -200,5 +251,12 @@ li a:active {
     border-bottom-left-radius: 50px;
     box-shadow: var(--card-box-shadow);
     transition: box-shadow 1s ease-in-out;
+  }
+
+  @media (orientation: portrait) {
+    #card {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
   }
 }

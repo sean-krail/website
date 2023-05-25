@@ -54,16 +54,27 @@
     <!-- Light/dark theme -->
     <script>
       function isDarkTheme() {
-        const queryString = window.location.search.substring(1);
+        const theme = localStorage.getItem("theme");
         return (
-          queryString.includes("dark") ||
-          (!queryString.includes("light") &&
+          (theme && theme === "dark") ||
+          (!theme &&
+            window.matchMedia &&
             window.matchMedia("(prefers-color-scheme: dark)").matches)
         );
       }
-      if (isDarkTheme()) {
-        document.documentElement.setAttribute("data-theme", "dark");
+      function updateTheme() {
+        if (isDarkTheme()) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
       }
+      if (window.matchMedia) {
+        window
+          .matchMedia("(prefers-color-scheme: dark)")
+          .addEventListener("change", updateTheme);
+      }
+      updateTheme();
     </script>
     <!-- Google tag (gtag.js) -->
     <script
@@ -80,6 +91,20 @@
     </script>
   </head>
   <body class="gentle-flex">
+    <div class="dark-light-theme-selector-container">
+      <span
+        class="material-icons-outlined light-theme-selector"
+        onclick="localStorage.setItem('theme', 'dark'); updateTheme();"
+      >
+        light_mode
+      </span>
+      <span
+        class="material-icons-outlined dark-theme-selector"
+        onclick="localStorage.setItem('theme', 'light'); updateTheme();"
+      >
+        dark_mode
+      </span>
+    </div>
     <div id="card" class="gentle-flex landscape-row-portrait-column">
       <div id="myface-and-text" class="gentle-flex">
         <div id="myface-container">

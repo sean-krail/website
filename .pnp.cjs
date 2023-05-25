@@ -30,6 +30,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@babel/core", "npm:7.21.8"],\
             ["@fontsource/lato", "npm:5.0.1"],\
+            ["@fontsource/material-icons", "npm:5.0.1"],\
+            ["@fontsource/material-icons-outlined", "npm:5.0.1"],\
             ["@fontsource/raleway", "npm:5.0.1"],\
             ["@fontsource/roboto-mono", "npm:5.0.1"],\
             ["@parcel/compressor-brotli", "npm:2.8.3"],\
@@ -478,6 +480,24 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@fontsource-lato-npm-5.0.1-46832c1804-3792eaa306.zip/node_modules/@fontsource/lato/",\
           "packageDependencies": [\
             ["@fontsource/lato", "npm:5.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@fontsource/material-icons", [\
+        ["npm:5.0.1", {\
+          "packageLocation": "./.yarn/cache/@fontsource-material-icons-npm-5.0.1-233d9408c9-03b03d968c.zip/node_modules/@fontsource/material-icons/",\
+          "packageDependencies": [\
+            ["@fontsource/material-icons", "npm:5.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@fontsource/material-icons-outlined", [\
+        ["npm:5.0.1", {\
+          "packageLocation": "./.yarn/cache/@fontsource-material-icons-outlined-npm-5.0.1-fe064d31d8-f507606d5d.zip/node_modules/@fontsource/material-icons-outlined/",\
+          "packageDependencies": [\
+            ["@fontsource/material-icons-outlined", "npm:5.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7910,6 +7930,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["website", "workspace:."],\
             ["@babel/core", "npm:7.21.8"],\
             ["@fontsource/lato", "npm:5.0.1"],\
+            ["@fontsource/material-icons", "npm:5.0.1"],\
+            ["@fontsource/material-icons-outlined", "npm:5.0.1"],\
             ["@fontsource/raleway", "npm:5.0.1"],\
             ["@fontsource/roboto-mono", "npm:5.0.1"],\
             ["@parcel/compressor-brotli", "npm:2.8.3"],\

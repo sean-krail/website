@@ -5080,6 +5080,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pinst@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "pinst@npm:3.0.0"
+  bin:
+    pinst: bin.js
+  checksum: 4ae48a6a60f79c37071233af51b4d91bfc85cfa3c12b66ccda60cdb642b4d14a4ab0cb3587afc55b1f6192cea1772a5e4822026a0d0d3528296edef00cc2d61f
+  languageName: node
+  linkType: hard
+
 "postcss-calc@npm:^9.0.0":
   version: 9.0.1
   resolution: "postcss-calc@npm:9.0.1"
@@ -6531,6 +6540,7 @@ __metadata:
     node-gyp: ^9.3.1
     normalize.css: ^8.0.1
     parcel: ^2.8.3
+    pinst: ^3.0.0
     postcss: ^8.4.23
     prettier: ^2.8.8
     rimraf: ^5.0.1

@@ -6,15 +6,14 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "postinstall": "husky install",
-    "prepare": "husky install",
-    "lint": "eslint --fix src/ --ext .js,.jsx,.ts,.tsx",
-    "lint-check": "eslint src/ --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --write src/",
-    "format-check": "prettier --check src/",
-    "clean": "yarn rimraf dist/",
+    "build": "yarn clean && parcel build src/*.html",
     "start": "yarn clean && parcel src/*.html",
-    "build": "yarn clean && parcel build src/*.html"
+    "clean": "yarn rimraf dist/",
+    "format": "eslint --fix src/ --ext .js,.jsx,.ts,.tsx && prettier --write src/",
+    "format-check": "eslint src/ --ext .js,.jsx,.ts,.tsx && prettier --check src/",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "devDependencies": {
     "@babel/core": "^7.21.8",
@@ -44,11 +43,20 @@
     "node-gyp": "^9.3.1",
     "normalize.css": "^8.0.1",
     "parcel": "^2.8.3",
+    "pinst": "^3.0.0",
     "postcss": "^8.4.23",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "sharp": "^0.31.1",
     "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "eslint --fix"
+    ],
+    "src/**/*.{css,html,ts}": [
+      "prettier --write"
+    ]
   },
   "browserslist": "defaults",
   "packageManager": "yarn@3.5.1"

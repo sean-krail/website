@@ -15,7 +15,8 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version-file: .nvmrc
+          cache: yarn
 
       - name: Build
         env:
@@ -23,7 +24,6 @@ jobs:
         run: |
           sudo npm uninstall -g parcel-bundler
           yarn
-          yarn lint-check
           yarn format-check
           # builds silently fail with exit code 129
           # not sure who the culprit is; everything builds fine locally
@@ -31,7 +31,7 @@ jobs:
           yarn build || yarn build || yarn build || yarn build || yarn build
 
       - name: Create 404.html and other redirects
-        run : |
+        run: |
           cd dist/
           ln -s index.html 404.html
           ln -s seankrail-resume.pdf resume.pdf

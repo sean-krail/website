@@ -62,27 +62,6 @@
   font-feature-settings: "liga";
 }
 
-.dark-light-theme-selector-container {
-  position: fixed;
-  top: 25px;
-  right: 25px;
-  background-color: var(--background-color);
-  box-sizing: border-box;
-  border-radius: 25px;
-  cursor: pointer;
-  user-select: none;
-}
-.dark-theme-selector,
-.light-theme-selector {
-  padding: 10px;
-}
-.dark-theme-selector {
-  display: var(--dark-mode-display);
-}
-.light-theme-selector {
-  display: var(--light-mode-display);
-}
-
 .gentle-flex {
   display: flex;
   flex-direction: column;
@@ -102,11 +81,35 @@ body {
   height: 100%;
   background-color: var(--background-color);
   color: var(--text-color);
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
+.dark-light-theme-selector-container {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.25s ease-in-out;
+}
+.dark-theme-selector,
+.light-theme-selector {
+  padding: 10px;
+}
+.dark-theme-selector {
+  display: var(--dark-mode-display);
+}
+.light-theme-selector {
+  display: var(--light-mode-display);
 }
 
 #card {
   background-color: var(--background-color);
   text-align: center;
+  transition: background-color 0.25s ease-in-out;
 }
 
 #myface-and-text {
@@ -124,7 +127,7 @@ body {
 #myface {
   border-radius: var(--myface-side-length);
   will-change: transform;
-  transition: border-radius 0.5s ease-in-out;
+  transition: border-radius 0.25s ease-in-out;
   pointer-events: none;
 }
 #myface.top-right {
@@ -149,10 +152,9 @@ h1 {
   color: var(--primary-color);
 }
 a {
-  text-decoration: none;
-}
-a {
   color: var(--anchor-text-color);
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
 }
 a:hover {
   text-decoration: underline;
@@ -173,6 +175,7 @@ li {
   height: 40px;
   border-radius: 40px;
   background-color: var(--background-color);
+  transition: background-color 0.25s ease-in-out;
 }
 li a {
   width: 100%;
@@ -181,6 +184,7 @@ li a {
   border-radius: 25px;
   color: var(--text-color);
   box-shadow: var(--button-box-shadow);
+  transition: box-shadow 0.25s ease-in-out;
 }
 li a:focus {
   color: var(--focus-text-color);
@@ -250,7 +254,7 @@ li a:active {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 50px;
     box-shadow: var(--card-box-shadow);
-    transition: box-shadow 1s ease-in-out;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
   }
 
   @media (orientation: portrait) {

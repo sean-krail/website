@@ -112,6 +112,26 @@ body {
   transition: background-color 0.25s ease-in-out;
 }
 
+#likes-container {
+  visibility: hidden;
+  opacity: 0;
+  color: var(--anchor-text-color);
+  text-decoration: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
+}
+#likes-container:hover #likes-count {
+  text-decoration: underline;
+}
+/* .likes-container:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+} */
+/* .likes-container:active {
+  color: var(--secondary-color);
+} */
+
 #myface-and-text {
   gap: 3ch;
 }
@@ -210,7 +230,7 @@ li a:active {
 
 @media (orientation: portrait) {
   .gentle-flex.landscape-row-portrait-column {
-    gap: 3ch;
+    gap: 1ch;
   }
 }
 @media (orientation: landscape) {

@@ -37,7 +37,7 @@ function startLoop() {
   }, 3219);
 }
 
-export default async function animateBorder() {
+export async function animateBorder() {
   MY_FACE_CONTAINER.addEventListener("mouseout", () => startLoop());
   MY_FACE_CONTAINER.addEventListener("mouseup", () => startLoop());
 

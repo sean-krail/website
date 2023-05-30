@@ -1,10 +1,17 @@
-import animateBorder from "./features/animate-border";
-import slideshowBackground from "./features/slideshow-background";
+import {
+  animateBorder,
+  loadLikesCounter,
+  slideshowBackground,
+} from "./features";
+
+(async () => {
+  slideshowBackground();
+})();
 
 (async () => {
   animateBorder();
 })();
 
 (async () => {
-  slideshowBackground();
+  loadLikesCounter();
 })();

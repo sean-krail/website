@@ -38,6 +38,7 @@
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-parcel": "^1.10.6",
     "eslint-plugin-import": "^2.27.5",
+    "http-proxy-middleware": "^2.0.6",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "node-gyp": "^9.3.1",

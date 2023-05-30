@@ -50,6 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-import-resolver-node", "npm:0.3.7"],\
             ["eslint-import-resolver-parcel", "npm:1.10.6"],\
             ["eslint-plugin-import", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.27.5"],\
+            ["http-proxy-middleware", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.0.6"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:13.2.2"],\
             ["node-gyp", "npm:9.3.1"],\
@@ -1816,6 +1817,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/http-proxy", [\
+        ["npm:1.17.11", {\
+          "packageLocation": "./.yarn/cache/@types-http-proxy-npm-1.17.11-55ebe38928-38ef4f8c91.zip/node_modules/@types/http-proxy/",\
+          "packageDependencies": [\
+            ["@types/http-proxy", "npm:1.17.11"],\
+            ["@types/node", "npm:20.2.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/json-schema", [\
         ["npm:7.0.11", {\
           "packageLocation": "./.yarn/cache/@types-json-schema-npm-7.0.11-79462ae5ca-527bddfe62.zip/node_modules/@types/json-schema/",\
@@ -1839,6 +1850,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-14.18.47-d4b030205d-249467fa37.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:14.18.47"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:20.2.5", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-20.2.5-0014d2d9ce-38ce7c7e9d.zip/node_modules/@types/node/",\
+          "packageDependencies": [\
+            ["@types/node", "npm:20.2.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3832,6 +3850,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["eventemitter3", [\
+        ["npm:4.0.7", {\
+          "packageLocation": "./.yarn/cache/eventemitter3-npm-4.0.7-7afcdd74ae-1875311c42.zip/node_modules/eventemitter3/",\
+          "packageDependencies": [\
+            ["eventemitter3", "npm:4.0.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["execa", [\
         ["npm:7.1.1", {\
           "packageLocation": "./.yarn/cache/execa-npm-7.1.1-a258daf7fc-21fa46fc69.zip/node_modules/execa/",\
@@ -3957,6 +3984,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/flatted-npm-3.2.5-0ee5a8875f-3c436e9695.zip/node_modules/flatted/",\
           "packageDependencies": [\
             ["flatted", "npm:3.2.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["follow-redirects", [\
+        ["npm:1.15.2", {\
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
+          "packageDependencies": [\
+            ["follow-redirects", "npm:1.15.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.15.2", {\
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-2696a91c1b/0/cache/follow-redirects-npm-1.15.2-1ec1dd82be-faa66059b6.zip/node_modules/follow-redirects/",\
+          "packageDependencies": [\
+            ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.15.2"],\
+            ["@types/debug", null],\
+            ["debug", null]\
+          ],\
+          "packagePeers": [\
+            "@types/debug",\
+            "debug"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4428,6 +4477,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["http-proxy", [\
+        ["npm:1.18.1", {\
+          "packageLocation": "./.yarn/cache/http-proxy-npm-1.18.1-a313c479c5-f5bd96bf83.zip/node_modules/http-proxy/",\
+          "packageDependencies": [\
+            ["http-proxy", "npm:1.18.1"],\
+            ["eventemitter3", "npm:4.0.7"],\
+            ["follow-redirects", "virtual:a313c479c5c7e54d9ec8fbeeea69ff640f56b8989ea2dff42351a3fa5c4061fb80a52d8ede0f0826a181a216820c2d2c3f15da881e7fdf31cef1c446e42f0c45#npm:1.15.2"],\
+            ["requires-port", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["http-proxy-agent", [\
         ["npm:5.0.0", {\
           "packageLocation": "./.yarn/cache/http-proxy-agent-npm-5.0.0-7f1f121b83-e2ee1ff165.zip/node_modules/http-proxy-agent/",\
@@ -4436,6 +4497,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tootallnate/once", "npm:2.0.0"],\
             ["agent-base", "npm:6.0.2"],\
             ["debug", "virtual:1ca322a4d66c7a41fb1e112226317c5a21fb69ea7d45c9d09b748ed5b9f833c84750b4efbc0ff288a6bf112667942c8baf99cbcdf6d047bbf8cc131896c14fd5#npm:4.3.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["http-proxy-middleware", [\
+        ["npm:2.0.6", {\
+          "packageLocation": "./.yarn/cache/http-proxy-middleware-npm-2.0.6-3bb17658ee-2ee85bc878.zip/node_modules/http-proxy-middleware/",\
+          "packageDependencies": [\
+            ["http-proxy-middleware", "npm:2.0.6"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.0.6", {\
+          "packageLocation": "./.yarn/__virtual__/http-proxy-middleware-virtual-13065866bf/0/cache/http-proxy-middleware-npm-2.0.6-3bb17658ee-2ee85bc878.zip/node_modules/http-proxy-middleware/",\
+          "packageDependencies": [\
+            ["http-proxy-middleware", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.0.6"],\
+            ["@types/express", null],\
+            ["@types/http-proxy", "npm:1.17.11"],\
+            ["http-proxy", "npm:1.18.1"],\
+            ["is-glob", "npm:4.0.3"],\
+            ["is-plain-obj", "npm:3.0.0"],\
+            ["micromatch", "npm:4.0.5"]\
+          ],\
+          "packagePeers": [\
+            "@types/express"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -4784,6 +4870,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-path-inside-npm-3.0.3-2ea0ef44fd-abd50f0618.zip/node_modules/is-path-inside/",\
           "packageDependencies": [\
             ["is-path-inside", "npm:3.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["is-plain-obj", [\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/is-plain-obj-npm-3.0.0-a5ae411d5a-a6ebdf8e12.zip/node_modules/is-plain-obj/",\
+          "packageDependencies": [\
+            ["is-plain-obj", "npm:3.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -6956,6 +7051,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["requires-port", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/requires-port-npm-1.0.0-fd036b488a-eee0e303ad.zip/node_modules/requires-port/",\
+          "packageDependencies": [\
+            ["requires-port", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["resolve", [\
         ["patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=c3c19d", {\
           "packageLocation": "./.yarn/cache/resolve-patch-b984c6fd86-c79ecaea36.zip/node_modules/resolve/",\
@@ -7960,6 +8064,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-import-resolver-node", "npm:0.3.7"],\
             ["eslint-import-resolver-parcel", "npm:1.10.6"],\
             ["eslint-plugin-import", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.27.5"],\
+            ["http-proxy-middleware", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.0.6"],\
             ["husky", "npm:8.0.3"],\
             ["lint-staged", "npm:13.2.2"],\
             ["node-gyp", "npm:9.3.1"],\

@@ -56,7 +56,7 @@ function startSlideshow(mediaQuery: MediaQueryList | MediaQueryListEvent) {
   }
 }
 
-export default async function slideshowBackground() {
+export async function slideshowBackground() {
   const mediaQuery = window.matchMedia("(min-width: 1000px)");
   startSlideshow(mediaQuery);
   mediaQuery.addEventListener("change", startSlideshow);

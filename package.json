@@ -60,5 +60,5 @@
     ]
   },
   "browserslist": "defaults",
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.3"
 }

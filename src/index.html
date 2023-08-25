@@ -60,7 +60,7 @@
     />
     <!-- Light/dark theme -->
     <script>
-      function isDarkTheme() {
+      window.isDarkTheme = function () {
         const theme = localStorage.getItem("theme");
         return (
           (theme && theme === "dark") ||
@@ -68,20 +68,20 @@
             window.matchMedia &&
             window.matchMedia("(prefers-color-scheme: dark)").matches)
         );
-      }
-      function updateTheme() {
-        if (isDarkTheme()) {
+      };
+      window.updateTheme = function () {
+        if (window.isDarkTheme()) {
           document.documentElement.setAttribute("data-theme", "dark");
         } else {
           document.documentElement.setAttribute("data-theme", "light");
         }
-      }
+      };
       if (window.matchMedia) {
         window
           .matchMedia("(prefers-color-scheme: dark)")
-          .addEventListener("change", updateTheme);
+          .addEventListener("change", window.updateTheme);
       }
-      updateTheme();
+      window.updateTheme();
     </script>
     <!-- Google tag (gtag.js) -->
     <script
@@ -101,13 +101,13 @@
     <div class="dark-light-theme-selector-container">
       <span
         class="material-icons-outlined light-theme-selector"
-        onclick="localStorage.setItem('theme', 'dark'); updateTheme();"
+        onclick="localStorage.setItem('theme', 'dark'); window.updateTheme();"
       >
         light_mode
       </span>
       <span
         class="material-icons-outlined dark-theme-selector"
-        onclick="localStorage.setItem('theme', 'light'); updateTheme();"
+        onclick="localStorage.setItem('theme', 'light'); window.updateTheme();"
       >
         dark_mode
       </span>

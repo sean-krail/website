@@ -45,7 +45,7 @@
     "normalize.css": "^8.0.1",
     "parcel": "^2.9.2",
     "pinst": "^3.0.0",
-    "postcss": "^8.4.24",
+    "postcss": "^8.4.31",
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "sharp": "^0.31.1",

@@ -81,7 +81,9 @@ body {
   height: 100%;
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  transition:
+    color 0.25s ease-in-out,
+    background-color 0.25s ease-in-out;
 }
 
 .dark-light-theme-selector-container {
@@ -259,7 +261,9 @@ li a:active {
     bottom: 0;
     filter: blur(0px);
     z-index: -1;
-    transition: filter 1s ease-in-out, opacity 2s ease-in-out,
+    transition:
+      filter 1s ease-in-out,
+      opacity 2s ease-in-out,
       background-image 2s ease-in-out;
   }
 
@@ -274,7 +278,9 @@ li a:active {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 50px;
     box-shadow: var(--card-box-shadow);
-    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    transition:
+      background-color 0.25s ease-in-out,
+      box-shadow 0.25s ease-in-out;
   }
 
   @media (orientation: portrait) {

@@ -19,12 +19,13 @@ the page will reload with your latest changes.
 
 ## Updating
 
-### Updating node via nvm
+### Updating node via [mise](https://mise.jdx.dev/getting-started.html)
 
-There's a `.nvmrc` in this project root, so all you need to run is:
+There's a `.mise.toml in this project root, so all you need to run is:
 
 ```sh
-nvm use
+mise use node@20
+node -v
 ```
 
 ### Updating yarn

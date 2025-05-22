@@ -6829,7 +6829,7 @@ const RAW_RUNTIME_STATE =
           ["pump", "npm:3.0.0"],\
           ["rc", "npm:1.2.8"],\
           ["simple-get", "npm:4.0.1"],\
-          ["tar-fs", "npm:2.1.1"],\
+          ["tar-fs", "npm:2.1.2"],\
           ["tunnel-agent", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
@@ -7167,7 +7167,7 @@ const RAW_RUNTIME_STATE =
           ["prebuild-install", "npm:7.1.1"],\
           ["semver", "npm:7.5.4"],\
           ["simple-get", "npm:4.0.1"],\
-          ["tar-fs", "npm:2.1.1"],\
+          ["tar-fs", "npm:2.1.2"],\
           ["tunnel-agent", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
@@ -7594,10 +7594,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["tar-fs", [\
-      ["npm:2.1.1", {\
-        "packageLocation": "./.yarn/cache/tar-fs-npm-2.1.1-e374d3b7a2-526deae025.zip/node_modules/tar-fs/",\
+      ["npm:2.1.2", {\
+        "packageLocation": "./.yarn/cache/tar-fs-npm-2.1.2-4231292dd1-623f7e8e58.zip/node_modules/tar-fs/",\
         "packageDependencies": [\
-          ["tar-fs", "npm:2.1.1"],\
+          ["tar-fs", "npm:2.1.2"],\
           ["chownr", "npm:1.1.4"],\
           ["mkdirp-classic", "npm:0.5.3"],\
           ["pump", "npm:3.0.0"],\

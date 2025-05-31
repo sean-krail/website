@@ -1,13 +1,11 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "lib": ["ES2015", "DOM"],
-    "module": "ES2015",
-    "moduleResolution": "node",
-    "noImplicitAny": true,
-    "outDir": "./public/",
-    "sourceMap": true,
-    "target": "es5"
-  },
-  "include": ["src"]
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

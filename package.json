@@ -1,64 +1,48 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "repository": "https://github.com/sean-krail/website",
-  "author": "Sean Krail <sean@krail.dev>",
-  "license": "MIT",
+  "name": "website-vite",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "build": "yarn clean && parcel build src/*.html",
-    "start": "yarn clean && parcel src/*.html",
-    "clean": "yarn rimraf .parcel-cache/ dist/",
-    "format": "eslint --fix src/ --ext .js,.jsx,.ts,.tsx && prettier --write src/",
-    "format-check": "eslint src/ --ext .js,.jsx,.ts,.tsx && prettier --check src/",
-    "postinstall": "husky",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "style": "prettier . --write && eslint . --fix && stylelint src/**/*.css --fix",
+    "style:check": "prettier . --check && eslint . && stylelint src/**/*.css"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.33.0",
+    "@tanstack/react-query": "^5.77.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@fontsource/lato": "^5.0.18",
-    "@fontsource/material-icons": "^5.0.11",
-    "@fontsource/material-icons-outlined": "^5.0.11",
-    "@fontsource/raleway": "^5.0.16",
-    "@fontsource/roboto-mono": "^5.0.16",
-    "@parcel/compressor-brotli": "^2.11.0",
-    "@parcel/compressor-gzip": "^2.11.0",
-    "@parcel/config-default": "^2.11.0",
-    "@parcel/core": "^2.11.0",
-    "@parcel/transformer-image": "^2.11.0",
-    "@types/node": "^20.11.16",
-    "@typescript-eslint/eslint-plugin": "^6.20.0",
-    "@typescript-eslint/parser": "^6.20.0",
-    "babel-types": "^6.26.0",
-    "cssnano": "^6.0.3",
-    "eslint": "^8.56.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-node": "^0.3.9",
-    "eslint-import-resolver-parcel": "^1.10.6",
-    "eslint-plugin-import": "^2.29.1",
-    "http-proxy-middleware": "^2.0.6",
-    "husky": "^9.0.10",
-    "lint-staged": "^15.2.1",
-    "node-gyp": "^10.0.1",
-    "normalize.css": "^8.0.1",
-    "parcel": "^2.11.0",
-    "pinst": "^3.0.0",
-    "postcss": "^8.4.33",
-    "prettier": "^3.2.4",
-    "rimraf": "^5.0.5",
-    "sharp": "^0.31.1",
-    "typescript": "~5.3.3"
+    "@eslint/js": "^9.27.0",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react-swc": "^3.10.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-clean-order": "^7.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-css-modules": "^1.2.2",
+    "stylelint-css-modules-no-global-scoped-selector": "^1.0.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vite": "^6.3.5"
   },
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
   "lint-staged": {
-    "src/**/*.ts": [
+    "*": [
+      "prettier --write --ignore-unknown",
       "eslint --fix"
     ],
-    "src/**/*.{css,html,ts}": [
-      "prettier --write"
-    ]
-  },
-  "browserslist": "defaults",
-  "packageManager": "yarn@4.1.0"
+    "*.css": "stylelint --fix"
+  }
 }

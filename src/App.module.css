@@ -1,0 +1,27 @@
+.portrait {
+  will-change: filter;
+  height: 10em;
+
+  /* padding: 1em; */
+  transition: filter 300ms;
+}
+
+.portrait:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+@keyframes portrait-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .portrait.spin {
+    animation: portrait-spin infinite 20s linear;
+  }
+}

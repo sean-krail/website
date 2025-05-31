@@ -1,45 +1,34 @@
-# [seankrail.dev](https://seankrail.dev/)
+# https://seankrail.dev/
 
-[![GitHub Actions](https://github.com/sean-krail/website/workflows/Deploy%20GitHub%20Pages/badge.svg)](https://github.com/sean-krail/website/actions?query=workflow%3A%22Deploy+GitHub+Pages%22)
+## One time setup
 
-My personal website built using TypeScript, HTML, and CSS, built by Parcel, hosted on GitHub Pages, and continuously deployed by GitHub Actions.
-
-## Development
-
-Run the server in development mode with hot reloading:
+Install pnpm [using corepack](https://pnpm.io/installation#using-corepack):
 
 ```sh
-# runs `parcel src/*.html` under the hood
-yarn start
-# Server running at http://localhost:1234
+corepack enable pnpm
 ```
 
-Open up http://localhost:1234/ in your browser. Now everytime you save a file,
-the page will reload with your latest changes.
-
-## Updating
-
-### Updating node via [mise](https://mise.jdx.dev/getting-started.html)
-
-There's a `.mise.toml in this project root, so all you need to run is:
+Install dependencies
 
 ```sh
-mise use node@20
-node -v
+pnpm install
 ```
 
-### Updating yarn
-
-See https://yarnpkg.com/getting-started/install.
+## Develop
 
 ```sh
-# assuming you have already run:
-# corepack enable
-yarn set version stable
+pnpm run dev
 ```
 
-### Updating npm packages
+## Preview production build
 
 ```sh
-yarn up -i '*' '@*/*'
+pnpm run build --mode development
+pnpm run preview
+```
+
+## Build for production
+
+```sh
+pnpm run build
 ```

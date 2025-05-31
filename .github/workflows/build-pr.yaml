@@ -6,6 +6,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --max-old-space-size=4096
     steps:
       - uses: actions/checkout@v4
 
@@ -23,8 +25,6 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Build
-        env:
-          NODE_OPTIONS: --max-old-space-size=4096
         run: |
           sudo npm uninstall -g parcel-bundler
           yarn

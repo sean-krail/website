@@ -14,21 +14,28 @@ Install dependencies
 pnpm install
 ```
 
-## Develop
+## Development cycle
+
+`--host` is optional, but allows you to view the build over your LAN.
 
 ```sh
-pnpm run dev
+pnpm run dev --host
 ```
 
-## Preview production build
+(Optional) Preview production build
 
 ```sh
 pnpm run build --mode development
-pnpm run preview
+# or
+pnpm run build
+# then
+pnpm run preview --host
 ```
 
-## Build for production
+## Updating packages
 
 ```sh
-pnpm run build
+pnpm update --interactive
+# or
+pnpm update --interactive --latest
 ```

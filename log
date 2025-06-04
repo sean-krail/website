@@ -1,0 +1,780 @@
+commit 67cf1573b06c4c5268fd9eb81807cecf0ada00f2
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Tue Jun 3 06:20:28 2025 +0000
+
+    build(deps): bump tar-fs from 2.1.1 to 2.1.3
+    
+    Bumps [tar-fs](https://github.com/mafintosh/tar-fs) from 2.1.1 to 2.1.3.
+    - [Commits](https://github.com/mafintosh/tar-fs/commits)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: tar-fs
+      dependency-version: 2.1.3
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit cae2afbfff6b8d597c89c24b21663c0613b5d5a6
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 31 15:57:21 2025 -0400
+
+    ci: set NODE_OPTIONS at job-level
+
+commit a8ef704df2c93c25c09c1362ca69578c4783127d
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Apr 11 14:32:56 2024 +0000
+
+    build(deps): bump tar from 6.2.0 to 6.2.1
+    
+    Bumps [tar](https://github.com/isaacs/node-tar) from 6.2.0 to 6.2.1.
+    - [Release notes](https://github.com/isaacs/node-tar/releases)
+    - [Changelog](https://github.com/isaacs/node-tar/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/isaacs/node-tar/compare/v6.2.0...v6.2.1)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: tar
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 94e08a9e2f13f2b841580511e500d1f7b194ddc5
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sat Mar 16 23:56:00 2024 +0000
+
+    build(deps): bump follow-redirects from 1.15.5 to 1.15.6
+    
+    Bumps [follow-redirects](https://github.com/follow-redirects/follow-redirects) from 1.15.5 to 1.15.6.
+    - [Release notes](https://github.com/follow-redirects/follow-redirects/releases)
+    - [Commits](https://github.com/follow-redirects/follow-redirects/compare/v1.15.5...v1.15.6)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: follow-redirects
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 8f49894c7c1a512b24ca0fec36864d3f19ce7294
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Feb 21 03:32:59 2024 +0000
+
+    build(deps): bump ip from 2.0.0 to 2.0.1
+    
+    Bumps [ip](https://github.com/indutny/node-ip) from 2.0.0 to 2.0.1.
+    - [Commits](https://github.com/indutny/node-ip/compare/v2.0.0...v2.0.1)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: ip
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 2c9afe7fcd12a7f0e6579d1a6e2c2d403e60b86c
+Author: Sean Krail <sean@krail.dev>
+Date:   Fri Feb 2 23:50:51 2024 -0500
+
+    amazon -> aws and upgrade dependencies
+
+commit 5b4057be97dcf82b4f7d2e541d267aa43a27ab24
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Jan 10 18:04:47 2024 +0000
+
+    build(deps): bump follow-redirects from 1.15.2 to 1.15.4
+    
+    Bumps [follow-redirects](https://github.com/follow-redirects/follow-redirects) from 1.15.2 to 1.15.4.
+    - [Release notes](https://github.com/follow-redirects/follow-redirects/releases)
+    - [Commits](https://github.com/follow-redirects/follow-redirects/compare/v1.15.2...v1.15.4)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: follow-redirects
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 59eba2c98ed26e2d2bff903e4b2d16fbbeaf933d
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Oct 19 08:59:20 2023 +0000
+
+    build(deps): bump @babel/traverse from 7.22.5 to 7.23.2
+    
+    Bumps [@babel/traverse](https://github.com/babel/babel/tree/HEAD/packages/babel-traverse) from 7.22.5 to 7.23.2.
+    - [Release notes](https://github.com/babel/babel/releases)
+    - [Changelog](https://github.com/babel/babel/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/babel/babel/commits/v7.23.2/packages/babel-traverse)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: "@babel/traverse"
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit a24485c1fc49942f18626bab8ff56adf2eb8cb8d
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sat Oct 7 21:15:37 2023 +0000
+
+    build(deps-dev): bump postcss from 8.4.24 to 8.4.31
+    
+    Bumps [postcss](https://github.com/postcss/postcss) from 8.4.24 to 8.4.31.
+    - [Release notes](https://github.com/postcss/postcss/releases)
+    - [Changelog](https://github.com/postcss/postcss/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/postcss/postcss/compare/8.4.24...8.4.31)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: postcss
+      dependency-type: direct:development
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 720ebc331b639e618fcff46f116d49ce25da40cd
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed Aug 30 17:20:49 2023 -0400
+
+    feat: update resume
+
+commit efdfa37bff5a05b258facdf6a9793e961276f846
+Author: Sean Krail <sean@krail.dev>
+Date:   Fri Aug 25 16:16:40 2023 -0400
+
+    fix: make updateTheme function name static
+
+commit bfe67743da00f89e0e84be9cc57c5d8f38d61d91
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Jul 19 16:24:47 2023 +0000
+
+    build(deps): bump word-wrap from 1.2.3 to 1.2.4
+    
+    Bumps [word-wrap](https://github.com/jonschlinkert/word-wrap) from 1.2.3 to 1.2.4.
+    - [Release notes](https://github.com/jonschlinkert/word-wrap/releases)
+    - [Commits](https://github.com/jonschlinkert/word-wrap/compare/1.2.3...1.2.4)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: word-wrap
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 9395027e0caedd9b79ba975fce35104f4e85761b
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Tue Jul 11 02:02:11 2023 +0000
+
+    build(deps): bump semver from 5.7.1 to 5.7.2
+    
+    Bumps [semver](https://github.com/npm/node-semver) from 5.7.1 to 5.7.2.
+    - [Release notes](https://github.com/npm/node-semver/releases)
+    - [Changelog](https://github.com/npm/node-semver/blob/v5.7.2/CHANGELOG.md)
+    - [Commits](https://github.com/npm/node-semver/compare/v5.7.1...v5.7.2)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: semver
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 1cddc346076c2ea5c6761c55abcc97c71fc94674
+Author: Sean Krail <sean@krail.dev>
+Date:   Tue Jun 20 01:13:49 2023 -0400
+
+    feat: update resume (#62)
+
+commit a7224afa0e695ccdcb2d61ef077e3e342ad26642
+Author: Sean Krail <sean@krail.dev>
+Date:   Tue May 30 01:59:02 2023 -0400
+
+    feat: add like button (#61)
+
+commit 66b76b5bb8856ec983683d4b4e8c93335cc806c0
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon May 29 11:46:08 2023 -0400
+
+    feat: smooth out dark/light theme transition and preload icon font (#60)
+
+commit 6b2bd973347e11dcca10c7cac599f8e68586486a
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon May 29 02:47:10 2023 -0400
+
+    chore: minor changes while bootstrapping website-backend (#59)
+
+commit 1f9cb20c8cc79d5db4dbc7eb801f8373787d2879
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 24 23:51:28 2023 -0400
+
+    feat: add button to switch between dark and light theme (#58)
+
+commit bcb1c37dc7c76b65323d2ec8ac0d8b6eadc9a439
+Author: Sean Krail <sean@krail.dev>
+Date:   Tue May 23 19:19:44 2023 -0400
+
+    feat: use fontsource v5 and make myface non-selectable/draggable (#57)
+
+commit 8db0a4851cc7845fdb2c2b7168b045d96f6dc5a0
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 20 16:46:02 2023 -0400
+
+    feat: updated color theme, about text, and lighthouse suggestions (#56)
+
+commit 9d8e1b6debd2941a62933ee565c1a77cc071e7f8
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 20 14:35:52 2023 -0400
+
+    feat: precompress with both gzip and brotli (#55)
+
+commit 177935f9ffce52295cd90542d35ffb4e7ce33f1f
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 20 14:27:59 2023 -0400
+
+    feat: control light/dark color theme from JavaScript (#54)
+
+commit 38a963e7348ef29d5e018f5ca2172c2b7db51711
+Author: Sean Krail <sean@krail.dev>
+Date:   Thu May 18 21:07:08 2023 -0400
+
+    fix: animate border on mobile (#53)
+
+commit aeb8ca7964c1bc529699df8ce9ee9e68c61ced26
+Author: Sean Krail <sean@krail.dev>
+Date:   Thu May 18 00:06:53 2023 -0400
+
+    feat: prefer FOIT over FOUT
+
+commit 58ad6db437f1c949b10ea7c1ce9201d3e66f0af3
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu May 18 00:42:41 2023 +0000
+
+    build(deps): bump terser from 5.14.1 to 5.17.4
+    
+    Bumps [terser](https://github.com/terser/terser) from 5.14.1 to 5.17.4.
+    - [Changelog](https://github.com/terser/terser/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/terser/terser/compare/v5.14.1...v5.17.4)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: terser
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit ad65db45e75a12b5601a7e94cd8eec6d980e6aee
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu May 18 00:42:38 2023 +0000
+
+    build(deps): bump http-cache-semantics from 4.1.0 to 4.1.1
+    
+    Bumps [http-cache-semantics](https://github.com/kornelski/http-cache-semantics) from 4.1.0 to 4.1.1.
+    - [Commits](https://github.com/kornelski/http-cache-semantics/compare/v4.1.0...v4.1.1)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: http-cache-semantics
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 1819895f6bb57f945e23301620021d30e43f430d
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu May 18 00:42:38 2023 +0000
+
+    build(deps): bump json5 from 1.0.1 to 1.0.2
+    
+    Bumps [json5](https://github.com/json5/json5) from 1.0.1 to 1.0.2.
+    - [Release notes](https://github.com/json5/json5/releases)
+    - [Changelog](https://github.com/json5/json5/blob/main/CHANGELOG.md)
+    - [Commits](https://github.com/json5/json5/compare/v1.0.1...v1.0.2)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: json5
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+
+commit 6775f54b8bf0048275397d785e0a0a6264e169ee
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 17 21:04:29 2023 -0400
+
+    feat: preload fonts
+
+commit 2839f906ca03d6fb926d7dd0edf3f69cffa992c1
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 17 20:38:23 2023 -0400
+
+    feat: update dark/light color theme
+
+commit b42136131e5b8c65dd16152c19ee2d4dd0d0d5c5
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 17 20:37:41 2023 -0400
+
+    chore: cleanup slideshow background logic
+
+commit 20b409a3bba927e879341b44d1f1a5c36672ef57
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 17 20:37:13 2023 -0400
+
+    fix: increase resolution of myface
+
+commit a7950c80246a61857f858f921797856a2eb6c472
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 17 20:34:53 2023 -0400
+
+    feat: add custom font
+
+commit ae49dc23e2cceb308361974e9000f67c3e6c073f
+Author: Sean Krail <sean@krail.dev>
+Date:   Wed May 17 20:32:34 2023 -0400
+
+    feat: update resume
+
+commit 04cb991c194ccf6d5436e9e1b9f465a9ec5a7cad
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 13 23:41:13 2023 -0400
+
+    feat: restart setInterval on mouseout of animateBorder (#46)
+
+commit fe1850bcf43eedf91ebafd2a72e861dc091a8ffb
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 13 22:54:29 2023 -0400
+
+    feat: redirect /resume to resume pdf (#45)
+
+commit 2512ce39338f0ce7e65eeedc9d89d9ffd044b7d4
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 13 17:30:14 2023 -0400
+
+    feat: rewrite following responsive web design best practices (#44)
+
+commit 98a3f8de9d9a7be432e719f103151eccd0b3b1cb
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat May 13 13:39:50 2023 -0400
+
+    chore: upgrade ghaction-github-pages action (#43)
+
+commit bbba14cb79dff8630601709d24fb302ee111f24b
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Apr 30 15:50:26 2023 -0400
+
+    feat: track clicks (#41)
+
+commit 54132eecca826c23aa379d64572ee6d9ffb85868
+Author: Sean Krail <sean@krail.dev>
+Date:   Fri Apr 21 18:36:05 2023 -0400
+
+    fix: deploy to GitHub Pages on push to main (#40)
+
+commit cf85bc93df9d92a3dad738b88c7527ab0d85b463
+Author: Sean Krail <sean@krail.dev>
+Date:   Fri Apr 21 18:19:12 2023 -0400
+
+    feat: add analytics tracking (#39)
+
+commit 5871daa3f515c80d687028a24a28b9e2d5ecbc7f
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat Apr 15 15:23:20 2023 -0400
+
+    chore: upgrade npm packages (#37)
+
+commit e6c03907a5ed37f37433ed1fa3a95eceeab70a9f
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat Apr 15 15:04:07 2023 -0400
+
+    chore: adjust color palette (#36)
+
+commit e2e4e2ff21137330af6d2ebed86fe70b4f8906d4
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat Apr 15 14:49:52 2023 -0400
+
+    fix: remove outline on focused buttons (#35)
+
+commit 74f8f4244be356b298dd1ac8344151ffcf9231d9
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Jan 16 23:25:55 2023 -0500
+
+    chore: upload latest resume (#34)
+
+commit 9b846bb35a52ac4b36deacf141525b51496a19c8
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Jan 16 23:18:04 2023 -0500
+
+    feat: order cities and strikethrough past ones (#33)
+
+commit 1f15bfa6a3157b34c04b326888f02725e091e4c7
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Jan 16 22:55:54 2023 -0500
+
+    fix: use node v14 until ESM loader issue is fixed (#31)
+
+commit db454d5af956369054294edd3441a0f351a7d120
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Jan 16 21:46:02 2023 -0500
+
+    feat: upload new profile pic and temporary resume (#30)
+
+commit a1c69acb8ad20caaf622c2512cf4ce1244200830
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat Jun 11 12:43:30 2022 -0700
+
+    ci: build on every PR (#29)
+
+commit 2af3dc24d0883a1cd43b3cbf628148a738eef291
+Author: Sean Krail <sean@krail.dev>
+Date:   Sat Jun 11 12:17:39 2022 -0700
+
+    revert: sharp upgrade broke parcel, also upgrade packages (#28)
+
+commit 15876a1fd1721384a77a0c8ae68a77731cc76788
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Tue Jun 7 17:44:24 2022 -0700
+
+    build(deps-dev): bump sharp from 0.29.3 to 0.30.5 (#27)
+
+commit bf3180937013effa0a3e7090abd8ce228d9c1185
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun May 29 15:45:27 2022 -0700
+
+    fix: update GitHub Pages' FQDN (#26)
+
+commit 5b10dc8f8dcf789592447053c7bb887086a18179
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun May 29 15:41:11 2022 -0700
+
+    fix: remove scrollbars (#25)
+
+commit e441646f700377dc8cfcfa260b8dc4e64ff8fbaa
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun May 29 15:37:56 2022 -0700
+
+    fix: setup husky pre-commit hook (#24)
+
+commit c8f65d4e5245f19f444106ddfe9bbd27eb2ea49f
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun May 29 15:07:59 2022 -0700
+
+    fix: GitHub Pages build was failing for legitimate reasons (#23)
+
+commit 1f38972e414c900252166de6a43039d92a04658b
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun May 29 14:46:28 2022 -0700
+
+    feat: improve slideshow background, css, and other minor tweaks (#22)
+
+commit e38cf4ecab8f00795318f4f65fbdf649baaa825d
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Jul 18 20:13:01 2021 -0700
+
+    ci: workaround for failed build
+
+commit 3c46d6e3923ebaad06f3964444322c5267d2b055
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Jul 18 18:40:03 2021 -0700
+
+    fix: need to version more yarn files
+
+commit 3a5c85b417a65b365e0f830323f9fb812a1bbd90
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Jul 18 18:31:31 2021 -0700
+
+    feat: replace webpack with parcel
+
+commit 6ed7ba62bce2c2dc5e2154456c9f25864b99141a
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Jul 18 15:33:23 2021 -0700
+
+    ci: build and deploy mainline branch
+
+commit fedeabf1e19bad70c49bc1303d887d27f6813ac6
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Jul 18 15:15:47 2021 -0700
+
+    chore: upgrade to yarn v2
+
+commit c6322c63d23ac94878518dc0d77f0861ed4efcec
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Mar 18 22:45:47 2021 -0700
+
+    Bump elliptic from 6.5.3 to 6.5.4 (#15)
+    
+    Bumps [elliptic](https://github.com/indutny/elliptic) from 6.5.3 to 6.5.4.
+    - [Release notes](https://github.com/indutny/elliptic/releases)
+    - [Commits](https://github.com/indutny/elliptic/compare/v6.5.3...v6.5.4)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+commit 295842f22eb12cb020daac1ac42a2ee20cb0b7e4
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Fri Dec 11 19:48:44 2020 -0800
+
+    Bump ini from 1.3.5 to 1.3.8 (#14)
+    
+    Bumps [ini](https://github.com/isaacs/ini) from 1.3.5 to 1.3.8.
+    - [Release notes](https://github.com/isaacs/ini/releases)
+    - [Commits](https://github.com/isaacs/ini/compare/v1.3.5...v1.3.8)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+commit 2126dc8b8810c8fa3f58bac98cd3d63f3b1b4786
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Sun Sep 20 18:19:31 2020 -0700
+
+    Bump http-proxy from 1.18.0 to 1.18.1 (#13)
+    
+    Bumps [http-proxy](https://github.com/http-party/node-http-proxy) from 1.18.0 to 1.18.1.
+    - [Release notes](https://github.com/http-party/node-http-proxy/releases)
+    - [Changelog](https://github.com/http-party/node-http-proxy/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/http-party/node-http-proxy/compare/1.18.0...1.18.1)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+commit 03993e5546aad4b79a20bb7e69f96bfb60739a96
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Aug 12 21:38:15 2020 -0700
+
+    Bump elliptic from 6.5.2 to 6.5.3 (#12)
+    
+    Bumps [elliptic](https://github.com/indutny/elliptic) from 6.5.2 to 6.5.3.
+    - [Release notes](https://github.com/indutny/elliptic/releases)
+    - [Commits](https://github.com/indutny/elliptic/compare/v6.5.2...v6.5.3)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+commit c6fc0cd926bda89daed9a53f254b3a5d9d75e144
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Tue Jul 28 18:53:36 2020 -0400
+
+    Bump lodash from 4.17.15 to 4.17.19 (#11)
+    
+    Bumps [lodash](https://github.com/lodash/lodash) from 4.17.15 to 4.17.19.
+    - [Release notes](https://github.com/lodash/lodash/releases)
+    - [Commits](https://github.com/lodash/lodash/compare/4.17.15...4.17.19)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+commit 14a246bff57aa3214af2cbf651a61201702de6f5
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Mon Jun 8 15:37:47 2020 -0700
+
+    Bump websocket-extensions from 0.1.3 to 0.1.4 (#10)
+    
+    Bumps [websocket-extensions](https://github.com/faye/websocket-extensions-node) from 0.1.3 to 0.1.4.
+    - [Release notes](https://github.com/faye/websocket-extensions-node/releases)
+    - [Changelog](https://github.com/faye/websocket-extensions-node/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/faye/websocket-extensions-node/compare/0.1.3...0.1.4)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+commit 036ce5998ba5de8b0c97155b6b28ef45dcc23638
+Author: Sean Krail <sean@krail.dev>
+Date:   Thu Mar 19 12:04:14 2020 -0700
+
+    chore: update yarn.lock
+
+commit 906412ae728edc664e8074e7912cf875cc89a7a8
+Author: Sean Krail <sean@krail.dev>
+Date:   Thu Mar 19 11:42:32 2020 -0700
+
+    upgrade: fix ESLint's security vulnerabilities
+
+commit 754f6b946dfe7c30085b46f105284aff2c49c9e8
+Author: Sean Krail <sean@krail.dev>
+Date:   Tue Dec 17 00:07:27 2019 -0800
+
+    simplify favicons
+
+commit ed93053cd4a61c77bb565b5dcfa73c741ceebfc6
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Dec 15 22:44:11 2019 -0800
+
+    convert webpack config to typescript
+
+commit b1f49108f3fbe3028d3ad64069cf2e54e02796dc
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Dec 15 13:30:16 2019 -0800
+
+    move source map to its own file
+
+commit ff81dcd2b4b57f13b61101ce8474248d47e32a64
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Dec 15 00:11:35 2019 -0800
+
+    fix action
+
+commit 28ee26d2550477e96cf410d5e0f734eec04b1791
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Dec 15 00:01:52 2019 -0800
+
+    add typescript and webpack
+
+commit 787dec3a7c112fc4f80e9384b3b84b3aa704e0bc
+Author: Sean Krail <sean@krail.dev>
+Date:   Tue Dec 3 22:51:56 2019 -0800
+
+    rename resume file
+
+commit 1e1d605f683c74b9561388685f02860a193bb498
+Author: Sean Krail <sean-krail@users.noreply.github.com>
+Date:   Tue Dec 3 00:49:02 2019 -0800
+
+    fix error message and update border radius animation
+
+commit 865b0c8b2309893147a30212fa3ddd5b96af54ac
+Author: Sean Krail <sean-krail@users.noreply.github.com>
+Date:   Mon Dec 2 23:44:01 2019 -0800
+
+    minor fixes
+
+commit 15ce5244a90768952e5da395676391b246623b0a
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Mon Dec 2 23:26:48 2019 -0800
+
+    make 404.html a symlink to index.html
+
+commit aff53178d0a2666415553c7d5236057dad3744c0
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Mon Dec 2 22:52:15 2019 -0800
+
+    test 404.html
+
+commit cfbf5d5714267b752a6f0af3c48195697194ca43
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Mon Dec 2 15:24:24 2019 -0800
+
+    update resume
+
+commit 86985836cf7b6e45123c2e01c3901ed1fdc880f8
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Sun Dec 1 21:42:04 2019 -0800
+
+    Create README.md
+
+commit e1661ade70d57bc550f01bf18bd3c8df87c76d18
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Tue Nov 26 19:54:38 2019 -0800
+
+    Update deploy-gh-pages.yml
+
+commit 614353b30bd16427a41ec7be88810a05ebdbbb16
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Nov 25 22:42:36 2019 -0800
+
+    ghaction-github-pages is broken
+
+commit 50047d8c7846e5c6429a18f0d48d38982c89e909
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Nov 25 22:34:56 2019 -0800
+
+    update actions
+
+commit 9052c834854408537406da14239293bde505e925
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Nov 25 22:33:21 2019 -0800
+
+    fix issue with CNAME getting removed with each deploy
+
+commit dcce59f7286d1a91280cbd7480cf42fc687543cd
+Merge: dd13042 e9f8357
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Nov 25 22:28:50 2019 -0800
+
+    Merge branch 'master' of https://github.com/sean-krail/website
+
+commit dd130428733820ff82b7a212b785994b7ecbbc3b
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Nov 25 22:28:44 2019 -0800
+
+    add favicons (fixes #8)
+
+commit e9f83570c489e3252da78929f508d0cdb354431b
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Mon Nov 25 22:11:40 2019 -0800
+
+    fix github actions bug
+
+commit 2631e8d87e592591062fd32db842f6a234ff2ed8
+Author: Sean Krail <sean@krail.dev>
+Date:   Mon Nov 25 21:56:39 2019 -0800
+
+    added interactive border radius animation
+
+commit 09dab205ad27498bf746ed5d21db239b9b88d126
+Merge: 1fa4306 4208a14
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Nov 17 15:27:05 2019 -0800
+
+    Merge branch 'master' of https://github.com/sean-krail/website
+
+commit 1fa4306b207e11c3f281259f778e7675b9ff44fb
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Nov 17 15:26:30 2019 -0800
+
+    fix pdf link
+
+commit 4208a14d1e2ed2f13632760769c160b533bad685
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Sun Nov 17 15:22:24 2019 -0800
+
+    [actions] rename job and step
+
+commit 041adabd77c02dbe4d5febe3fc76efc3ccebacf0
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Nov 17 15:17:47 2019 -0800
+
+    [actions] update github pages on push to master
+
+commit e430b2bcfe4ca505bbff688839e1adf769633bb8
+Author: Sean Krail <sean@krail.dev>
+Date:   Sun Nov 17 15:11:08 2019 -0800
+
+    move public/static to public/assets
+
+commit b2ba09d7a44b13c2f8d679fefc6516e4f6cf26c6
+Author: Sean Krail <sean@Seans-MacBook-Pro.local>
+Date:   Sun Nov 17 15:09:47 2019 -0800
+
+    public/static to public/assets
+
+commit 70174e90a1b76ba2c6c89cb15bb75b6d119e3848
+Author: Sean Krail <sean@Seans-MacBook-Pro.local>
+Date:   Sun Nov 17 15:08:00 2019 -0800
+
+    move src to public
+
+commit 1a72cf9c0cba17fd5b4e3c30fdf4b7bfb51151c6
+Author: Sean Krail <21267343+sean-krail@users.noreply.github.com>
+Date:   Sun Nov 17 14:58:28 2019 -0800
+
+    first commit (#7)
+
+commit f8b0ef4d0154b05038da087d32a148447f6db31e
+Author: Sean Krail <i@seankrail.com>
+Date:   Mon Apr 30 17:04:02 2018 -0700
+
+    documentation

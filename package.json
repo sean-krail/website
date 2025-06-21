@@ -31,7 +31,7 @@
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "babel-types": "^6.26.0",
-    "cssnano": "^6.0.3",
+    "cssnano": "^7.0.7",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",

@@ -27,7 +27,7 @@
     "@parcel/config-default": "^2.11.0",
     "@parcel/core": "^2.11.0",
     "@parcel/transformer-image": "^2.11.0",
-    "@types/node": "^20.11.16",
+    "@types/node": "^24.0.3",
     "@typescript-eslint/eslint-plugin": "^6.20.0",
     "@typescript-eslint/parser": "^6.20.0",
     "babel-types": "^6.26.0",

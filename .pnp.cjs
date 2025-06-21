@@ -27,7 +27,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["@babel/core", "npm:7.23.9"],\
-          ["@fontsource/lato", "npm:5.0.18"],\
+          ["@fontsource/lato", "npm:5.2.6"],\
           ["@fontsource/material-icons", "npm:5.0.11"],\
           ["@fontsource/material-icons-outlined", "npm:5.0.11"],\
           ["@fontsource/raleway", "npm:5.0.16"],\
@@ -406,10 +406,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@fontsource/lato", [\
-      ["npm:5.0.18", {\
-        "packageLocation": "./.yarn/cache/@fontsource-lato-npm-5.0.18-4db0a3660b-c5d02be158.zip/node_modules/@fontsource/lato/",\
+      ["npm:5.2.6", {\
+        "packageLocation": "./.yarn/cache/@fontsource-lato-npm-5.2.6-464145c2a5-45a1152378.zip/node_modules/@fontsource/lato/",\
         "packageDependencies": [\
-          ["@fontsource/lato", "npm:5.0.18"]\
+          ["@fontsource/lato", "npm:5.2.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8028,7 +8028,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["website", "workspace:."],\
           ["@babel/core", "npm:7.23.9"],\
-          ["@fontsource/lato", "npm:5.0.18"],\
+          ["@fontsource/lato", "npm:5.2.6"],\
           ["@fontsource/material-icons", "npm:5.0.11"],\
           ["@fontsource/material-icons-outlined", "npm:5.0.11"],\
           ["@fontsource/raleway", "npm:5.0.16"],\

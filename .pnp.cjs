@@ -30,7 +30,7 @@ const RAW_RUNTIME_STATE =
           ["@fontsource/lato", "npm:5.2.6"],\
           ["@fontsource/material-icons", "npm:5.0.11"],\
           ["@fontsource/material-icons-outlined", "npm:5.0.11"],\
-          ["@fontsource/raleway", "npm:5.0.16"],\
+          ["@fontsource/raleway", "npm:5.2.6"],\
           ["@fontsource/roboto-mono", "npm:5.0.16"],\
           ["@parcel/compressor-brotli", "npm:2.11.0"],\
           ["@parcel/compressor-gzip", "npm:2.11.0"],\
@@ -433,10 +433,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@fontsource/raleway", [\
-      ["npm:5.0.16", {\
-        "packageLocation": "./.yarn/cache/@fontsource-raleway-npm-5.0.16-23b0612dc7-c911aa9fe1.zip/node_modules/@fontsource/raleway/",\
+      ["npm:5.2.6", {\
+        "packageLocation": "./.yarn/cache/@fontsource-raleway-npm-5.2.6-14180d0341-2ddc79f148.zip/node_modules/@fontsource/raleway/",\
         "packageDependencies": [\
-          ["@fontsource/raleway", "npm:5.0.16"]\
+          ["@fontsource/raleway", "npm:5.2.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8031,7 +8031,7 @@ const RAW_RUNTIME_STATE =
           ["@fontsource/lato", "npm:5.2.6"],\
           ["@fontsource/material-icons", "npm:5.0.11"],\
           ["@fontsource/material-icons-outlined", "npm:5.0.11"],\
-          ["@fontsource/raleway", "npm:5.0.16"],\
+          ["@fontsource/raleway", "npm:5.2.6"],\
           ["@fontsource/roboto-mono", "npm:5.0.16"],\
           ["@parcel/compressor-brotli", "npm:2.11.0"],\
           ["@parcel/compressor-gzip", "npm:2.11.0"],\

@@ -310,10 +310,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/raleway@npm:^5.0.16":
-  version: 5.0.16
-  resolution: "@fontsource/raleway@npm:5.0.16"
-  checksum: 10/c911aa9fe13811c783a643ac8ab81f056c91a0dcbb1d18d2585789867773f2f073906d88ca9d46aad74194c17278a2185c92df0a6e259b8fa780c8395f365b42
+"@fontsource/raleway@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/raleway@npm:5.2.6"
+  checksum: 10/2ddc79f148b8519e6ee39e7c026e0a1a508b6d5dbe76a71e9793dafb97c86b3ea8e7e2063f2952e3e6011ef939b40634ff62e4f43fd8d1d8406d464d11d58f1b
   languageName: node
   linkType: hard
 
@@ -6526,7 +6526,7 @@ __metadata:
     "@fontsource/lato": "npm:^5.2.6"
     "@fontsource/material-icons": "npm:^5.0.11"
     "@fontsource/material-icons-outlined": "npm:^5.0.11"
-    "@fontsource/raleway": "npm:^5.0.16"
+    "@fontsource/raleway": "npm:^5.2.6"
     "@fontsource/roboto-mono": "npm:^5.0.16"
     "@parcel/compressor-brotli": "npm:^2.11.0"
     "@parcel/compressor-gzip": "npm:^2.11.0"

@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
           ["@fontsource/material-icons", "npm:5.0.11"],\
           ["@fontsource/material-icons-outlined", "npm:5.0.11"],\
           ["@fontsource/raleway", "npm:5.2.6"],\
-          ["@fontsource/roboto-mono", "npm:5.0.16"],\
+          ["@fontsource/roboto-mono", "npm:5.2.6"],\
           ["@parcel/compressor-brotli", "npm:2.11.0"],\
           ["@parcel/compressor-gzip", "npm:2.11.0"],\
           ["@parcel/config-default", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.11.0"],\
@@ -442,10 +442,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@fontsource/roboto-mono", [\
-      ["npm:5.0.16", {\
-        "packageLocation": "./.yarn/cache/@fontsource-roboto-mono-npm-5.0.16-2a0a3ef707-536f33d6ad.zip/node_modules/@fontsource/roboto-mono/",\
+      ["npm:5.2.6", {\
+        "packageLocation": "./.yarn/cache/@fontsource-roboto-mono-npm-5.2.6-06a7471d61-479a23536f.zip/node_modules/@fontsource/roboto-mono/",\
         "packageDependencies": [\
-          ["@fontsource/roboto-mono", "npm:5.0.16"]\
+          ["@fontsource/roboto-mono", "npm:5.2.6"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8028,7 +8028,7 @@ const RAW_RUNTIME_STATE =
           ["@fontsource/material-icons", "npm:5.0.11"],\
           ["@fontsource/material-icons-outlined", "npm:5.0.11"],\
           ["@fontsource/raleway", "npm:5.2.6"],\
-          ["@fontsource/roboto-mono", "npm:5.0.16"],\
+          ["@fontsource/roboto-mono", "npm:5.2.6"],\
           ["@parcel/compressor-brotli", "npm:2.11.0"],\
           ["@parcel/compressor-gzip", "npm:2.11.0"],\
           ["@parcel/config-default", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.11.0"],\

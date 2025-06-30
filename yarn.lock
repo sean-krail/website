@@ -317,10 +317,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/roboto-mono@npm:^5.0.16":
-  version: 5.0.16
-  resolution: "@fontsource/roboto-mono@npm:5.0.16"
-  checksum: 10/536f33d6ad0c1580704b4367956106d7f9f9f88ea181a40f511e19d00e20560bf75b2318685fe8cbb350a6d0b90417127e4a864c467478b3ca0a938003133c66
+"@fontsource/roboto-mono@npm:^5.2.6":
+  version: 5.2.6
+  resolution: "@fontsource/roboto-mono@npm:5.2.6"
+  checksum: 10/479a23536f1bfab358243569b42efc014e595946d58d1efce5923b030d5999b89f04a74248325bafd549a47500bbf427090a3911c0c4b356d91c8d2404c5cfbd
   languageName: node
   linkType: hard
 
@@ -6761,7 +6761,7 @@ __metadata:
     "@fontsource/material-icons": "npm:^5.0.11"
     "@fontsource/material-icons-outlined": "npm:^5.0.11"
     "@fontsource/raleway": "npm:^5.2.6"
-    "@fontsource/roboto-mono": "npm:^5.0.16"
+    "@fontsource/roboto-mono": "npm:^5.2.6"
     "@parcel/compressor-brotli": "npm:^2.11.0"
     "@parcel/compressor-gzip": "npm:^2.11.0"
     "@parcel/config-default": "npm:^2.11.0"

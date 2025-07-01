@@ -620,12 +620,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@parcel/compressor-gzip@npm:^2.11.0":
-  version: 2.11.0
-  resolution: "@parcel/compressor-gzip@npm:2.11.0"
+"@parcel/compressor-gzip@npm:^2.15.4":
+  version: 2.15.4
+  resolution: "@parcel/compressor-gzip@npm:2.15.4"
   dependencies:
-    "@parcel/plugin": "npm:2.11.0"
-  checksum: 10/c0f44d01133a181830816fb8d8b0f2c9831739b021329efe55810d8328bca8a9bb3e51ee937d75a49429bf5a9ec8d016b2bef589b1c8f17f212b1398abeda02f
+    "@parcel/plugin": "npm:2.15.4"
+  checksum: 10/1fcbbecc8b19c5514c6620d02a1082d8fed82c6c5fdea9c03155ac88616cb861da8e29e7632723d43cd8feca24f8582dbfe91cbbb3b20b28fbd2c068f3ee8e5a
   languageName: node
   linkType: hard
 
@@ -6763,7 +6763,7 @@ __metadata:
     "@fontsource/raleway": "npm:^5.2.6"
     "@fontsource/roboto-mono": "npm:^5.2.6"
     "@parcel/compressor-brotli": "npm:^2.11.0"
-    "@parcel/compressor-gzip": "npm:^2.11.0"
+    "@parcel/compressor-gzip": "npm:^2.15.4"
     "@parcel/config-default": "npm:^2.11.0"
     "@parcel/core": "npm:^2.11.0"
     "@parcel/transformer-image": "npm:^2.15.4"

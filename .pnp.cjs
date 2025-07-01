@@ -33,7 +33,7 @@ const RAW_RUNTIME_STATE =
           ["@fontsource/raleway", "npm:5.2.6"],\
           ["@fontsource/roboto-mono", "npm:5.2.6"],\
           ["@parcel/compressor-brotli", "npm:2.11.0"],\
-          ["@parcel/compressor-gzip", "npm:2.11.0"],\
+          ["@parcel/compressor-gzip", "npm:2.15.4"],\
           ["@parcel/config-default", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.11.0"],\
           ["@parcel/core", "npm:2.11.0"],\
           ["@parcel/transformer-image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.15.4"],\
@@ -835,11 +835,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@parcel/compressor-gzip", [\
-      ["npm:2.11.0", {\
-        "packageLocation": "./.yarn/cache/@parcel-compressor-gzip-npm-2.11.0-b6ad6691af-c0f44d0113.zip/node_modules/@parcel/compressor-gzip/",\
+      ["npm:2.15.4", {\
+        "packageLocation": "./.yarn/cache/@parcel-compressor-gzip-npm-2.15.4-35f0e197d5-1fcbbecc8b.zip/node_modules/@parcel/compressor-gzip/",\
         "packageDependencies": [\
-          ["@parcel/compressor-gzip", "npm:2.11.0"],\
-          ["@parcel/plugin", "npm:2.11.0"]\
+          ["@parcel/compressor-gzip", "npm:2.15.4"],\
+          ["@parcel/plugin", "npm:2.15.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -8305,7 +8305,7 @@ const RAW_RUNTIME_STATE =
           ["@fontsource/raleway", "npm:5.2.6"],\
           ["@fontsource/roboto-mono", "npm:5.2.6"],\
           ["@parcel/compressor-brotli", "npm:2.11.0"],\
-          ["@parcel/compressor-gzip", "npm:2.11.0"],\
+          ["@parcel/compressor-gzip", "npm:2.15.4"],\
           ["@parcel/config-default", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.11.0"],\
           ["@parcel/core", "npm:2.11.0"],\
           ["@parcel/transformer-image", "virtual:8155a6cfbfdfb46993d4580fc21eff83d1d0b0104b30d90fc21cb3d1cb6af424a8c7374ff66963ea16d49d22220c7d865f663773d2ac91294d0e55ae2e9a274c#npm:2.15.4"],\

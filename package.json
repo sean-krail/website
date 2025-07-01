@@ -23,7 +23,7 @@
     "@fontsource/raleway": "^5.2.6",
     "@fontsource/roboto-mono": "^5.2.6",
     "@parcel/compressor-brotli": "^2.11.0",
-    "@parcel/compressor-gzip": "^2.11.0",
+    "@parcel/compressor-gzip": "^2.15.4",
     "@parcel/config-default": "^2.11.0",
     "@parcel/core": "^2.11.0",
     "@parcel/transformer-image": "^2.15.4",

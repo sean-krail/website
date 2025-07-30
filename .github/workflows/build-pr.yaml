@@ -2,39 +2,31 @@ name: Build PR Changes
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      NODE_OPTIONS: --max-old-space-size=4096
     steps:
       - uses: actions/checkout@v4
 
-      - uses: jdx/mise-action@v2
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
-
-      - uses: actions/cache@v4
+      - uses: pnpm/action-setup@v4
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+          version: 10
+          run_install: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
 
       - name: Build
         run: |
-          sudo npm uninstall -g parcel-bundler
-          yarn
-          yarn format-check
-          # builds silently fail with exit code 129
-          # not sure who the culprit is; everything builds fine locally
-          # after a few failed builds, it finally builds successfully
-          yarn build || yarn build || yarn build || yarn build || yarn build
+          pnpm install
+          pnpm style:check
+          pnpm build
 
-      - name: Create 404.html
+      - name: Create 404.html redirect
         run: |
           cd dist/
           ln -s index.html 404.html

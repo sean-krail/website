@@ -1132,7 +1132,7 @@ const RAW_RUNTIME_STATE =
           ["htmlnano", "virtual:3247e2fdd19c2c795e62631e70f3e3729802df34c67aae7c2f68650c81a102812badea2b63ad3d824f96ab40d31f4ec337238461392c7320e3bfdc126e76a6cc#npm:2.1.0"],\
           ["nullthrows", "npm:1.1.1"],\
           ["posthtml", "npm:0.16.6"],\
-          ["svgo", "npm:2.8.0"]\
+          ["svgo", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1172,7 +1172,7 @@ const RAW_RUNTIME_STATE =
           ["@parcel/diagnostic", "npm:2.11.0"],\
           ["@parcel/plugin", "npm:2.11.0"],\
           ["@parcel/utils", "npm:2.11.0"],\
-          ["svgo", "npm:2.8.0"]\
+          ["svgo", "npm:2.8.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -4782,7 +4782,7 @@ const RAW_RUNTIME_STATE =
           ["purgecss", null],\
           ["relateurl", null],\
           ["srcset", null],\
-          ["svgo", "npm:2.8.0"],\
+          ["svgo", "npm:2.8.2"],\
           ["terser", null],\
           ["timsort", "npm:0.3.0"],\
           ["uncss", null]\
@@ -7447,6 +7447,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["sax", [\
+      ["npm:1.5.0", {\
+        "packageLocation": "./.yarn/cache/sax-npm-1.5.0-d40bca2226-9012ff37dd.zip/node_modules/sax/",\
+        "packageDependencies": [\
+          ["sax", "npm:1.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["semver", [\
       ["npm:6.3.1", {\
         "packageLocation": "./.yarn/cache/semver-npm-6.3.1-bcba31fdbe-1ef3a85bd0.zip/node_modules/semver/",\
@@ -7884,16 +7893,16 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["svgo", [\
-      ["npm:2.8.0", {\
-        "packageLocation": "./.yarn/cache/svgo-npm-2.8.0-43b4f3debe-2b74544da1.zip/node_modules/svgo/",\
+      ["npm:2.8.2", {\
+        "packageLocation": "./.yarn/cache/svgo-npm-2.8.2-ae6ef227db-a0922a2cbb.zip/node_modules/svgo/",\
         "packageDependencies": [\
-          ["svgo", "npm:2.8.0"],\
-          ["@trysound/sax", "npm:0.2.0"],\
+          ["svgo", "npm:2.8.2"],\
           ["commander", "npm:7.2.0"],\
           ["css-select", "npm:4.3.0"],\
           ["css-tree", "npm:1.1.3"],\
           ["csso", "npm:4.2.0"],\
           ["picocolors", "npm:1.0.0"],\
+          ["sax", "npm:1.5.0"],\
           ["stable", "npm:0.1.8"]\
         ],\
         "linkType": "HARD"\

@@ -120,6 +120,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
+@reference "tailwindcss/theme.css"
 @layer base {
   * {
     @apply border-border outline-ring/50;

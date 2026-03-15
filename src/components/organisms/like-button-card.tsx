@@ -1,12 +1,11 @@
 import { FunctionComponent } from "react";
-import LikeButton from "../../molecules/like-button";
-import styles from "./index.module.css";
+import { LikeButton } from "@/molecules/like-button";
 
 const LikeButtonCard: FunctionComponent = () => {
   return (
-    <div className={`${styles.card}`}>
+    <div className="">
       <LikeButton />
-      <p hidden className={`${styles.footnotes}`}>
+      <p hidden className="">
         Likes counter backed by
         <br />
         AWS Lambda and DynamoDB
@@ -15,4 +14,4 @@ const LikeButtonCard: FunctionComponent = () => {
   );
 };
 
-export default LikeButtonCard;
+export { LikeButtonCard };

@@ -1,8 +1,8 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { App } from "~/App.tsx";
+import "~/index.css";
 
 const queryClient = new QueryClient();
 
@@ -12,10 +12,10 @@ if (!rootElement) {
   throw new Error("No #root element defined");
 }
 
-ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
+createRoot(rootElement).render(
+  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <App />
     </QueryClientProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 );

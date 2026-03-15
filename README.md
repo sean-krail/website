@@ -16,7 +16,7 @@ pnpm install
 
 ## Development cycle
 
-`--host` is optional, but allows you to view the build over your LAN.
+`--host` is optional, but allows you to view the build over your LAN (e.g. to test desktop and mobile).
 
 ```sh
 pnpm run dev --host

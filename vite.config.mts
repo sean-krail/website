@@ -1,4 +1,6 @@
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
+import path from "path";
 import { CommonServerOptions, defineConfig } from "vite";
 
 const commonServerOptions: CommonServerOptions = {
@@ -15,7 +17,13 @@ const commonServerOptions: CommonServerOptions = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  server: { ...commonServerOptions },
+  plugins: [react(), tailwindcss()],
   preview: { ...commonServerOptions },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src/components"),
+      "~": path.resolve(__dirname, "src"),
+    },
+  },
+  server: { ...commonServerOptions },
 });

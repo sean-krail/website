@@ -1,4 +1,5 @@
-import { IconThumbUp, IconThumbUpFilled } from "@tabler/icons-react";
+import { Button } from "@/atoms/button";
+import { ThumbsUpIcon } from "@phosphor-icons/react";
 import {
   QueryKey,
   useMutation,
@@ -6,7 +7,6 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { FunctionComponent, useState } from "react";
-import Button from "../../atoms/button";
 
 const COUNT_LIKES_QUERY_KEY: QueryKey = ["count", "likes"];
 
@@ -23,7 +23,7 @@ const LikeButton: FunctionComponent = () => {
       ),
   });
 
-  // TODO: testing - remove
+  // TODO: add spinnner
   console.log({ isPending, error, data, isFetching });
 
   const { mutateAsync } = useMutation({
@@ -52,17 +52,17 @@ const LikeButton: FunctionComponent = () => {
 
   return (
     <Button
-      disabled={false}
+      disabled={disabled}
       onClick={async () => {
         setDisabled(true);
         await mutateAsync();
       }}
     >
-      {!disabled ? <IconThumbUp stroke={2} /> : <IconThumbUpFilled />}
+      <ThumbsUpIcon alt="Like" weight={disabled ? "fill" : "regular"} />
       &nbsp;&nbsp;&nbsp;
       <span>{data}</span>
     </Button>
   );
 };
 
-export default LikeButton;
+export { LikeButton };

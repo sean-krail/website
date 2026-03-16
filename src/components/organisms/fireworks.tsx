@@ -1,7 +1,7 @@
 "use client";
 import { ComponentProps, useEffect, useImperativeHandle, useRef } from "react";
 import { cn } from "~/lib/utils";
-import { getThemeVariables } from "~/hooks/theme-variables";
+import { getThemeVariables } from "~/hooks/use-theme-variables";
 
 const rand = (min: number, max: number): number =>
   Math.random() * (max - min) + min;

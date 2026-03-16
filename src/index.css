@@ -123,22 +123,8 @@
 @reference "tailwindcss/theme.css"
 @layer base {
   * {
+    border-color: var(--border);
+
     @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  html {
-    @apply font-sans;
-  }
-
-  code {
-    @apply font-mono;
-  }
-
-  a {
-    @apply underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3;
   }
 }

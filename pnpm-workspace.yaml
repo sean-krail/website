@@ -1,5 +1,4 @@
 onlyBuiltDependencies:
-  - "@swc/core"
   - esbuild
 
 useNodeVersion: 22.17.1

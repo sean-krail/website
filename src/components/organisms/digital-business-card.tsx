@@ -18,6 +18,7 @@ const DigitalBusinessCard: FunctionComponent = () => {
       <p className="text-center gap-2">
         Front-Office Engineer at{" "}
         <a
+          className="underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3"
           href="https://sig.com/what-we-do/"
           target="_blank"
           title="Susquehanna International Group"
@@ -25,10 +26,13 @@ const DigitalBusinessCard: FunctionComponent = () => {
           SIG
         </a>{" "}
         <br />
-        <code className="accent-foreground">Building Fullstack Software</code>
+        <code className="accent-foreground font-mono">
+          Building Fullstack Software
+        </code>
         <br />
         ex-
         <a
+          className="underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3"
           href="https://aws.amazon.com/"
           target="_blank"
           title="Amazon Web Services"
@@ -39,6 +43,7 @@ const DigitalBusinessCard: FunctionComponent = () => {
       <p>Philadelphia, PA</p>
       <div className="">
         <a
+          className="underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3"
           href="mailto:sean@krail.dev?subject=Let%27s%20connect!"
           target="_blank"
           title="sean@krail.dev"
@@ -47,6 +52,7 @@ const DigitalBusinessCard: FunctionComponent = () => {
         </a>
         &nbsp;&nbsp;&nbsp;
         <a
+          className="underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3"
           href="https://github.com/sean-krail"
           target="_blank"
           title="@sean-krail"
@@ -55,6 +61,7 @@ const DigitalBusinessCard: FunctionComponent = () => {
         </a>
         &nbsp;&nbsp;&nbsp;
         <a
+          className="underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3"
           href="https://linkedin.com/in/seankrail"
           target="_blank"
           title="@seankrail"

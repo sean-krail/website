@@ -1,4 +1,5 @@
 onlyBuiltDependencies:
   - esbuild
+  - msw
 
-useNodeVersion: 22.17.1
+useNodeVersion: 24.14.0

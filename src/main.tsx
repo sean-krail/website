@@ -2,8 +2,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { UAParser } from "ua-parser-js";
-import { Bots } from "ua-parser-js/extensions";
 import { isBot } from "ua-parser-js/bot-detection";
+import { Bots } from "ua-parser-js/extensions";
 import { App } from "~/App.tsx";
 import "~/index.css";
 

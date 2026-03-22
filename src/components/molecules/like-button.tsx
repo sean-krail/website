@@ -1,66 +1,34 @@
 import { Button } from "@/atoms/button";
+import { Spinner } from "@/atoms/spinner";
 import { ThumbsUpIcon } from "@phosphor-icons/react";
-import {
-  QueryKey,
-  useMutation,
-  useQuery,
-  useQueryClient,
-} from "@tanstack/react-query";
 import { FunctionComponent, useState } from "react";
+import { useLikeCount } from "~/hooks/use-like-count";
 
-const COUNT_LIKES_QUERY_KEY: QueryKey = ["count", "likes"];
+interface LikeButtonProps {
+  onLike?: () => void;
+  onHoverLike?: () => void;
+}
 
-const LikeButton: FunctionComponent = () => {
+const LikeButton: FunctionComponent<LikeButtonProps> = ({
+  onLike,
+  onHoverLike,
+}) => {
   const [disabled, setDisabled] = useState(false);
-
-  const queryClient = useQueryClient();
-
-  const { isPending, error, data, isFetching } = useQuery<number>({
-    queryKey: COUNT_LIKES_QUERY_KEY,
-    queryFn: async () =>
-      Number(
-        await (await fetch(import.meta.env.VITE_LIKES_COUNT_ENDPOINT)).json(),
-      ),
-  });
-
-  // TODO: add spinnner
-  console.log({ isPending, error, data, isFetching });
-
-  const { mutateAsync } = useMutation({
-    mutationFn: async () =>
-      await (
-        await fetch(import.meta.env.VITE_LIKES_COUNT_ENDPOINT, {
-          method: "POST",
-        })
-      ).json(),
-    onMutate: async () => {
-      await queryClient.cancelQueries({ queryKey: COUNT_LIKES_QUERY_KEY });
-      const previousCount = queryClient.getQueryData(COUNT_LIKES_QUERY_KEY);
-      queryClient.setQueryData(
-        COUNT_LIKES_QUERY_KEY,
-        (count: number) => count + 1,
-      );
-      return { previousCount };
-    },
-    onError: async (_error, _variables, context) => {
-      queryClient.setQueryData([COUNT_LIKES_QUERY_KEY], context?.previousCount);
-    },
-    onSettled: async () => {
-      await queryClient.invalidateQueries({ queryKey: COUNT_LIKES_QUERY_KEY });
-    },
-  });
+  const { count, isLoading, submitLike } = useLikeCount();
 
   return (
     <Button
-      disabled={disabled}
+      disabled={disabled || isLoading}
+      onMouseEnter={onHoverLike}
       onClick={async () => {
         setDisabled(true);
-        await mutateAsync();
+        onLike?.();
+        await submitLike();
       }}
     >
       <ThumbsUpIcon alt="Like" weight={disabled ? "fill" : "regular"} />
       &nbsp;&nbsp;&nbsp;
-      <span>{data}</span>
+      {isLoading ? <Spinner /> : <span>{count}</span>}
     </Button>
   );
 };

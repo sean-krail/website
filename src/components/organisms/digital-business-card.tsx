@@ -1,9 +1,16 @@
 import portrait from "~/assets/portrait.jpg";
-import { ThemeToggleGroup } from "@/organisms/theme-toggle-group";
-import { LikeButtonCard } from "@/organisms/like-button-card";
 import { FunctionComponent } from "react";
+import { LikeButton } from "@/molecules/like-button";
 
-const DigitalBusinessCard: FunctionComponent = () => {
+interface DigitalBusinessCardProps {
+  onLike?: () => void;
+  onHoverLike?: () => void;
+}
+
+const DigitalBusinessCard: FunctionComponent<DigitalBusinessCardProps> = ({
+  onLike,
+  onHoverLike,
+}) => {
   return (
     <main className="bg-transparent flex flex-col items-center justify-center gap-8">
       <img
@@ -14,7 +21,6 @@ const DigitalBusinessCard: FunctionComponent = () => {
       <h1 className="text-center bg-linear-60 from-chart-2 to-purple-500 bg-clip-text inline-block text-transparent text-6xl font-extrabold">
         Sean Krail
       </h1>
-      <ThemeToggleGroup className="fixed top-5 right-5" />
       <p className="text-center gap-2">
         Front-Office Engineer at{" "}
         <a
@@ -69,7 +75,7 @@ const DigitalBusinessCard: FunctionComponent = () => {
           LinkedIn
         </a>
       </div>
-      <LikeButtonCard />
+      <LikeButton onLike={onLike} onHoverLike={onHoverLike} />
     </main>
   );
 };

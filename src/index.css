@@ -9,7 +9,7 @@
 @custom-variant light (&:is(.light *));
 
 :root {
-  --background: oklch(100% 0 0deg);
+  --background: oklch(97% 0 0deg);
   --foreground: oklch(14.7% 0.004 49.3deg);
   --card: oklch(100% 0 0deg);
   --card-foreground: oklch(14.7% 0.004 49.3deg);
@@ -27,11 +27,11 @@
   --border: oklch(92.2% 0.005 34.3deg);
   --input: oklch(92.2% 0.005 34.3deg);
   --ring: oklch(71.4% 0.014 41.2deg);
-  --chart-1: oklch(45% 0.085 224.283deg);
-  --chart-2: oklch(52% 0.105 223.128deg);
-  --chart-3: oklch(60.9% 0.126 221.723deg);
-  --chart-4: oklch(71.5% 0.143 215.221deg);
-  --chart-5: oklch(86.5% 0.127 207.078deg);
+  --chart-1: oklch(45% 0.14 224deg);
+  --chart-2: oklch(50% 0.17 244deg);
+  --chart-3: oklch(55% 0.2 264deg);
+  --chart-4: oklch(59% 0.23 284deg);
+  --chart-5: oklch(63% 0.265 304deg);
   --radius: 0.625rem;
   --sidebar: oklch(98.6% 0.002 67.8deg);
   --sidebar-foreground: oklch(14.7% 0.004 49.3deg);
@@ -44,11 +44,11 @@
 }
 
 .dark {
-  --background: oklch(14.7% 0.004 49.3deg);
+  --background: oklch(20% 0.004 43deg);
   --foreground: oklch(98.6% 0.002 67.8deg);
-  --card: oklch(21.4% 0.009 43.1deg);
+  --card: oklch(26% 0.009 43deg);
   --card-foreground: oklch(98.6% 0.002 67.8deg);
-  --popover: oklch(21.4% 0.009 43.1deg);
+  --popover: oklch(26% 0.009 43deg);
   --popover-foreground: oklch(98.6% 0.002 67.8deg);
   --primary: oklch(92.2% 0.005 34.3deg);
   --primary-foreground: oklch(21.4% 0.009 43.1deg);
@@ -62,11 +62,11 @@
   --border: oklch(100% 0 0deg / 10%);
   --input: oklch(100% 0 0deg / 15%);
   --ring: oklch(54.7% 0.021 43.1deg);
-  --chart-1: oklch(86.5% 0.127 207.078deg);
-  --chart-2: oklch(71.5% 0.143 215.221deg);
-  --chart-3: oklch(60.9% 0.126 221.723deg);
-  --chart-4: oklch(52% 0.105 223.128deg);
-  --chart-5: oklch(45% 0.085 224.283deg);
+  --chart-1: oklch(65% 0.14 224deg);
+  --chart-2: oklch(68% 0.17 244deg);
+  --chart-3: oklch(71% 0.2 264deg);
+  --chart-4: oklch(74% 0.23 284deg);
+  --chart-5: oklch(77% 0.265 304deg);
   --sidebar: oklch(21.4% 0.009 43.1deg);
   --sidebar-foreground: oklch(98.6% 0.002 67.8deg);
   --sidebar-primary: oklch(48.8% 0.243 264.376deg);

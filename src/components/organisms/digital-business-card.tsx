@@ -18,7 +18,7 @@ const DigitalBusinessCard: FunctionComponent<DigitalBusinessCardProps> = ({
         src={portrait}
         alt="Portrait"
       />
-      <h1 className="text-center bg-linear-60 from-chart-2 to-purple-500 bg-clip-text inline-block text-transparent text-6xl font-extrabold">
+      <h1 className="text-center bg-linear-60 from-chart-1 to-chart-5 bg-clip-text inline-block text-transparent text-6xl font-extrabold">
         Sean Krail
       </h1>
       <p className="text-center gap-2">

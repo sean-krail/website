@@ -2,7 +2,6 @@ import {
   FireworksBackground,
   type FireworksBackgroundHandle,
 } from "@/organisms/fireworks";
-import { ThemeProvider } from "@/theme-provider";
 import { DigitalBusinessCard } from "@/organisms/digital-business-card";
 import { useRef, useState } from "react";
 import { ThemeToggleGroup } from "@/organisms/theme-toggle-group";
@@ -13,21 +12,19 @@ function App() {
 
   return (
     <>
+      <ThemeToggleGroup className="z-2 fixed top-5 right-5" />
       <div className="relative h-screen w-screen">
         <FireworksBackground
           ref={fireworksRef}
-          className={"absolute inset-0 h-full w-full"}
+          className={"z-0 absolute inset-0 h-full w-full"}
           population={0.2}
           active={liked}
         />
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
-            <ThemeToggleGroup className="fixed top-5 right-5" />
-            <DigitalBusinessCard
-              onLike={() => setLiked(true)}
-              onHoverLike={() => fireworksRef.current?.launchOne()}
-            />
-          </ThemeProvider>
+        <div className="z-1 absolute inset-0 flex items-center justify-center">
+          <DigitalBusinessCard
+            onLike={() => setLiked(true)}
+            onHoverLike={() => fireworksRef.current?.launchOne()}
+          />
         </div>
       </div>
     </>

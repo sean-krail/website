@@ -26,6 +26,11 @@ export const useThemeVariables = (): ThemeVariables => {
   const [themeVariables, setThemeVariables] =
     useState<ThemeVariables>(getThemeVariables());
   const { theme } = useTheme();
-  useEffect(() => setThemeVariables(getThemeVariables()), [theme]);
+  useEffect(() => {
+    const id = requestAnimationFrame(() =>
+      setThemeVariables(getThemeVariables()),
+    );
+    return () => cancelAnimationFrame(id);
+  }, [theme]);
   return themeVariables;
 };

@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { getThemeVariables } from "~/hooks/use-theme-variables";
+import { useEffect, useMemo, useRef } from "react";
+import { useThemeVariables } from "~/hooks/use-theme-variables";
 
 const rand = (min: number, max: number): number =>
   Math.random() * (max - min) + min;
@@ -214,14 +214,23 @@ function useFireworksCanvas({
   const containerRef = useRef<HTMLDivElement>(null);
   const launchOneRef = useRef<(() => void) | null>(null);
 
-  const themeVariables = getThemeVariables();
-  const color = [
-    themeVariables.chart1,
-    themeVariables.chart2,
-    themeVariables.chart3,
-    themeVariables.chart4,
-    themeVariables.chart5,
-  ];
+  const themeVariables = useThemeVariables();
+  const color = useMemo(
+    () => [
+      themeVariables.chart1,
+      themeVariables.chart2,
+      themeVariables.chart3,
+      themeVariables.chart4,
+      themeVariables.chart5,
+    ],
+    [
+      themeVariables.chart1,
+      themeVariables.chart2,
+      themeVariables.chart3,
+      themeVariables.chart4,
+      themeVariables.chart5,
+    ],
+  );
 
   useEffect(() => {
     const canvas = canvasRef.current;

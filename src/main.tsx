@@ -4,6 +4,7 @@ import { createRoot } from "react-dom/client";
 import { UAParser } from "ua-parser-js";
 import { isBot } from "ua-parser-js/bot-detection";
 import { Bots } from "ua-parser-js/extensions";
+import { ThemeProvider } from "~/components/theme-provider";
 import { App } from "~/App.tsx";
 import "~/index.css";
 
@@ -28,7 +29,9 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <App />
+      <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
+        <App />
+      </ThemeProvider>
     </QueryClientProvider>
   </StrictMode>,
 );

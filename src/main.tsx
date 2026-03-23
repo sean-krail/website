@@ -29,7 +29,7 @@ if (!rootElement) {
 createRoot(rootElement).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider defaultTheme="dark" storageKey="ui-theme">
+      <ThemeProvider defaultTheme="system" storageKey="ui-theme">
         <App />
       </ThemeProvider>
     </QueryClientProvider>

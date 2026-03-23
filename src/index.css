@@ -127,4 +127,18 @@
 
     @apply border-border outline-ring/50;
   }
+
+  html,
+  body {
+    /* Prevent the body itself from bouncing/scrolling on Firefox iOS
+       where overscroll-behavior: contain on child elements is unreliable */
+    overscroll-behavior: none;
+  }
+
+  #root {
+    /* 100svh = small viewport height (conservative: sized to viewport when
+       browser chrome is visible). Avoids position:fixed which has a known
+       Firefox iOS bug where it uses the layout viewport in landscape. */
+    height: 100svh;
+  }
 }

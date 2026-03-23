@@ -32,9 +32,7 @@ const DigitalBusinessCard: FunctionComponent<DigitalBusinessCardProps> = ({
           SIG
         </a>{" "}
         <br />
-        <code className="accent-foreground font-mono">
-          Building Fullstack Software
-        </code>
+        <code className="accent-foreground">Building Fullstack Software</code>
         <br />
         ex-
         <a

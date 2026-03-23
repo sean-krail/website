@@ -7,13 +7,13 @@ const toggleVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-transparent",
-        outline: "border border-input bg-transparent hover:bg-muted",
+        default: "bg-sidebar",
+        outline: "border border-input bg-sidebar hover:bg-muted",
       },
       size: {
         default: "h-9 min-w-9 rounded-[min(var(--radius-2xl),12px)] px-2.5",
         sm: "h-8 min-w-8 px-3",
-        lg: "h-10 min-w-10 px-2.5",
+        lg: "h-12 min-w-12 px-2.5",
       },
     },
     defaultVariants: {

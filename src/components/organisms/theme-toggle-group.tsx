@@ -12,6 +12,7 @@ const ThemeToggleGroup = ({
     <ToggleGroup
       className={className}
       variant="outline"
+      size="lg"
       defaultValue={[theme]}
       {...props}
     >

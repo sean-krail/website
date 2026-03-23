@@ -1,14 +1,16 @@
-"use client";
 import React, { ComponentProps, useImperativeHandle } from "react";
 import { cn } from "~/lib/utils";
 import { useFireworksCanvas } from "~/hooks/use-fireworks-canvas";
 
-interface FireworksBackgroundHandle {
+interface FireworksBackgroundOverlayHandle {
   launchOne: () => void;
 }
 
-type FireworksBackgroundProps = Omit<ComponentProps<"div">, "color" | "ref"> & {
-  ref?: React.Ref<FireworksBackgroundHandle>;
+type FireworksBackgroundOverlayProps = Omit<
+  ComponentProps<"div">,
+  "color" | "ref"
+> & {
+  ref?: React.Ref<FireworksBackgroundOverlayHandle>;
   canvasProps?: ComponentProps<"canvas">;
   active?: boolean;
   population?: number;
@@ -18,7 +20,7 @@ type FireworksBackgroundProps = Omit<ComponentProps<"div">, "color" | "ref"> & {
   particleSize?: { min: number; max: number } | number;
 };
 
-function FireworksBackground({
+function FireworksBackgroundOverlay({
   ref,
   className,
   canvasProps,
@@ -29,7 +31,7 @@ function FireworksBackground({
   particleSpeed = { min: 2, max: 7 },
   particleSize = { min: 1, max: 5 },
   ...props
-}: FireworksBackgroundProps) {
+}: FireworksBackgroundOverlayProps) {
   const { canvasRef, containerRef, launchOneRef } = useFireworksCanvas({
     active,
     population,
@@ -47,7 +49,10 @@ function FireworksBackground({
     <div
       ref={containerRef}
       data-slot="fireworks-background"
-      className={cn("relative size-full overflow-hidden", className)}
+      className={cn(
+        "absolute inset-0 overflow-hidden pointer-events-none",
+        className,
+      )}
       {...props}
     >
       <canvas
@@ -60,7 +65,7 @@ function FireworksBackground({
 }
 
 export {
-  FireworksBackground,
-  type FireworksBackgroundHandle,
-  type FireworksBackgroundProps,
+  FireworksBackgroundOverlay,
+  type FireworksBackgroundOverlayHandle,
+  type FireworksBackgroundOverlayProps,
 };

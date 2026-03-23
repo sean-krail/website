@@ -10,10 +10,12 @@ import "~/index.css";
 
 (() => {
   // See: https://github.com/faisalman/ua-parser-js/commit/bbcf24e
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const url = isBot(UAParser(navigator.userAgent, Bots) as any)
+  const url = isBot(UAParser(navigator.userAgent, Bots).ua)
     ? import.meta.env.VITE_BOTS_COUNT_ENDPOINT
     : import.meta.env.VITE_USERS_COUNT_ENDPOINT;
+  if (!url || !(url.length > 0)) {
+    return;
+  }
   document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "hidden") {
       navigator.sendBeacon(url);

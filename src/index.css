@@ -1,8 +1,8 @@
-@import url("@fontsource-variable/noto-sans");
-@import url("@fontsource-variable/noto-sans-mono");
-@import url("tailwindcss");
-@import url("tw-animate-css");
-@import url("shadcn/tailwind.css");
+@import "tailwindcss";
+@import "@fontsource-variable/noto-sans";
+@import "@fontsource-variable/noto-sans-mono";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant system (&:is(.system *));
 @custom-variant dark (&:is(.dark *));

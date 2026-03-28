@@ -1,35 +1,29 @@
 name: Build PR Changes
-
 on:
   pull_request:
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-
       - uses: pnpm/action-setup@v5
         with:
           run_install: false
-
       - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
-
       - name: Build
         run: |
           pnpm install
-          pnpm style:check
+          pnpm format:check
           pnpm build
-
       - name: Create 404.html redirect
         run: |
           cd dist/
           ln -s index.html 404.html
-
+          # ln -s seankrail-resume.pdf resume.pdf
       - name: Create git history file
         run: |
           git log > dist/log

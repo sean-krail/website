@@ -1,9 +1,9 @@
 {
   "name": "website",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:24-trixie",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
   "features": {
     "ghcr.io/devcontainers/features/node:2": {
-      "version": "24",
+      "version": "latest",
       "pnpmVersion": "latest"
     },
     "ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
@@ -41,6 +41,6 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "pnpm install && fish",
-  "remoteUser": "node"
+  "postCreateCommand": "pnpm install && pnpm build",
+  "remoteUser": "vscode"
 }

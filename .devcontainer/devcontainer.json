@@ -1,11 +1,12 @@
 {
   "name": "website",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24-trixie",
   "features": {
     "ghcr.io/devcontainers/features/node:2": {
       "version": "24",
       "pnpmVersion": "latest"
-    }
+    },
+    "ghcr.io/devcontainers-extra/features/fish-apt-get:1": {}
   },
   "customizations": {
     "vscode": {
@@ -23,23 +24,23 @@
         "editor.codeActionsOnSave": {
           "source.fixAll.eslint": "explicit"
         },
-        "typescript.preferences.importModuleSpecifier": "non-relative",
+        "js/ts.preferences.importModuleSpecifier": "non-relative",
         "css.validate": false,
         "stylelint.validate": ["css"]
       }
     }
   },
-  "forwardPorts": [5173, 4173],
+  "forwardPorts": [4173, 5173],
   "portsAttributes": {
-    "5173": {
-      "label": "Vite Dev Server",
-      "onAutoForward": "notify"
-    },
     "4173": {
       "label": "Vite Preview",
       "onAutoForward": "silent"
+    },
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "pnpm install",
+  "postCreateCommand": "pnpm install && fish",
   "remoteUser": "node"
 }

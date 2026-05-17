@@ -1,5 +1,3 @@
-onlyBuiltDependencies:
-  - esbuild
-  - msw
-
-useNodeVersion: 24.14.0
+allowBuilds:
+  esbuild: true
+  msw: true

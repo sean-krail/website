@@ -1,4 +1,4 @@
-# https://seankrail.dev/
+# https://sean.krail.cloud/
 
 ## One time setup
 

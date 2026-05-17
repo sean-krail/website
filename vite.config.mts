@@ -8,7 +8,7 @@ const commonServerOptions: CommonServerOptions = {
   cors: false,
   proxy: {
     "/count/likes": {
-      target: "https://api.seankrail.dev",
+      target: "https://api.sean.krail.cloud",
       changeOrigin: true,
       secure: false,
     },

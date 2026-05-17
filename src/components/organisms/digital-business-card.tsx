@@ -48,9 +48,9 @@ const DigitalBusinessCard: FunctionComponent<DigitalBusinessCardProps> = ({
       <div className="">
         <a
           className="underline text-chart-2 font-semibold hover:no-underline hover:text-chart-3"
-          href="mailto:sean@krail.dev?subject=Let%27s%20connect!"
+          href="mailto:sean@krail.cloud?subject=Let%27s%20connect!"
           target="_blank"
-          title="sean@krail.dev"
+          title="sean@krail.cloud"
         >
           Email
         </a>

@@ -36,7 +36,6 @@ jobs:
       - name: Create 404.html and resume redirects
         run: |
           cd dist/
-          echo 'include: [".well-known"]' > _config.yml
           ln -s index.html 404.html
           # ln -s seankrail-resume.pdf resume.pdf
       - name: Create git history file
